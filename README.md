@@ -2,9 +2,9 @@
 
 This repository contains various files related to the Synthetic Cognitive Augmentation Network (SCAN) project.
 
-## Code
+# Code
 
-### SCANV1.ipynb
+## SCANV1.ipynb
 
 This Jupyter notebook contains the code for the SCAN system, including:
 
@@ -18,9 +18,9 @@ This Jupyter notebook contains the code for the SCAN system, including:
 - Loading and preprocessing the WikiText-2 dataset
 - Training the combined model and saving the final weights and tokenizer
 
-## Forms
+# Forms
 
-### Synthetic Cognitive Augmentation Network Alignment Questionnaire.md
+## Synthetic Cognitive Augmentation Network Alignment Questionnaire.md
 
 This markdown file contains the Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ), which is designed to evaluate various aspects of a user's cognitive functioning and personal preferences to align the SCAN system with their unique needs. The questionnaire includes sections on:
 
@@ -35,7 +35,7 @@ This markdown file contains the Synthetic Cognitive Augmentation Network Alignme
 
 The file also includes information on scoring, interpretation, privacy, and confidentiality.
 
-### Cognitive Augmentation User Survey Evaluation.md
+## Cognitive Augmentation User Survey Evaluation.md
 
 This markdown file contains the Cognitive Augmentation User Survey Evaluation (CAUSE), which aims to gather user insights to help develop the SCAN system to meet user needs and expectations. The survey consists of approximately 50 questions and covers topics such as:
 
@@ -51,11 +51,9 @@ This markdown file contains the Cognitive Augmentation User Survey Evaluation (C
 - Demographic Information
 - Pricing and Value Perception
 
-### TrainingDatasets
+# TrainingDatasets
 
 This directory contains several JSON lines files for training and validation data related to different PFC agents:
-
-# PFC Agent Datasets
 
 ## ACC (Anterior Cingulate Cortex)
 - `TrainingDatasets\acc_training_data.jsonl`
