@@ -1,4 +1,4 @@
-# README.md
+# SCAN-Resources
 
 This repository contains various files related to the Synthetic Cognitive Augmentation Network (SCAN) project.
 
@@ -53,15 +53,26 @@ This markdown file contains the Cognitive Augmentation User Survey Evaluation (C
 
 ### TrainingDatasets
 
-This directory contains several JSON lines files for training and validation data related to different brain regions:
+This directory contains several JSON lines files for training and validation data related to different PFC agents:
 
-TrainingDatasets\acc_training_data.jsonl
-TrainingDatasets\acc_validation_data.jsonl
-TrainingDatasets\dlpfc_training_data.jsonl
-TrainingDatasets\dlpfc_validation_data.jsonl
-TrainingDatasets\mPFC_training_data.jsonl
-TrainingDatasets\mPFC_validation_data.jsonl
-TrainingDatasets\ofc_training_data.jsonl
-TrainingDatasets\ofc_validation_data.jsonl
-TrainingDatasets\vmpfc_training_data.jsonl
-TrainingDatasets\vmpfc_validation_data.jsonl
+# PFC Agent Datasets
+
+## ACC (Anterior Cingulate Cortex)
+- `TrainingDatasets\acc_training_data.jsonl`
+- `TrainingDatasets\acc_validation_data.jsonl`
+
+## DLPFC (Dorsolateral Prefrontal Cortex)
+- `TrainingDatasets\dlpfc_training_data.jsonl`
+- `TrainingDatasets\dlpfc_validation_data.jsonl`
+
+## mPFC (Medial Prefrontal Cortex)
+- `TrainingDatasets\mPFC_training_data.jsonl`
+- `TrainingDatasets\mPFC_validation_data.jsonl`
+
+## OFC (Orbitofrontal Cortex)
+- `TrainingDatasets\ofc_training_data.jsonl`
+- `TrainingDatasets\ofc_validation_data.jsonl`
+
+## vmPFC (Ventromedial Prefrontal Cortex)
+- `TrainingDatasets\vmpfc_training_data.jsonl`
+- `TrainingDatasets\vmpfc_validation_data.jsonl`
