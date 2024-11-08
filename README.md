@@ -1,5 +1,7 @@
 # SCAN-Resources
 
+[![DOI](https://zenodo.org/badge/885073150.svg)](https://doi.org/10.5281/zenodo.14053202)
+
 This repository contains various files related to the Synthetic Cognitive Augmentation Network (SCAN) project.
 
 # Code
