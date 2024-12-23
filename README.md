@@ -2,30 +2,14 @@
 
 [![DOI](https://zenodo.org/badge/885073150.svg)](https://doi.org/10.5281/zenodo.14053202)
 
-This repository contains various files related to the Synthetic Cognitive Augmentation Network (SCAN) project.
+This repository contains various files related to the Synthetic Cognitive Augmentation Network (SCAN) project. Below is an overview of its contents:
 
-# Code
+## **Forms**
 
-## SCANV1.ipynb
+### **Synthetic Cognitive Augmentation Network Alignment Questionnaire.md**
+This markdown file contains the **Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ)**, which evaluates various aspects of a user's cognitive functioning and personal preferences to align the SCAN system with their unique needs.
 
-This Jupyter notebook contains the code for the SCAN system, including:
-
-- Installation of required libraries (PyTorch, Transformers, Datasets, Weights & Biases)
-- Importing necessary modules for model building, data loading, and logging
-- Defining custom surrogate functions and classes for spiking neural networks
-- Defining the Adaptive Exponential Integrate-and-Fire (AdEx) neuron model
-- Defining the Spiking Neural Network (SNN) layer
-- Defining a combined model using Transformers and SNN
-- Defining training and saving functions for the model
-- Loading and preprocessing the WikiText-2 dataset
-- Training the combined model and saving the final weights and tokenizer
-
-# Forms
-
-## Synthetic Cognitive Augmentation Network Alignment Questionnaire.md
-
-This markdown file contains the Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ), which is designed to evaluate various aspects of a user's cognitive functioning and personal preferences to align the SCAN system with their unique needs. The questionnaire includes sections on:
-
+#### **Sections of the Questionnaire:**
 - Executive Functioning
 - Emotion Regulation
 - Impulsivity
@@ -35,44 +19,63 @@ This markdown file contains the Synthetic Cognitive Augmentation Network Alignme
 - Perceived Stress
 - Empathy and Social Cognition
 
-The file also includes information on scoring, interpretation, privacy, and confidentiality.
+---
 
-## Cognitive Augmentation User Survey Evaluation.md
+### **SCANAQ Numerical Scoring Breakdown.md**
+This file provides detailed information on **scoring and result interpretation** for the SCANAQ questionnaire.  
 
-This markdown file contains the Cognitive Augmentation User Survey Evaluation (CAUSE), which aims to gather user insights to help develop the SCAN system to meet user needs and expectations. The survey consists of approximately 50 questions and covers topics such as:
+#### **Details:**
+- **Scoring Breakdown**: A structured approach to categorize responses across cognitive and emotional dimensions.
+- **Result Interpretation**: Guidelines to understand the user's profile and align it with the SCAN system for personalized support.
+- **Suggestions**: Offers actionable recommendations for improvement based on each score range, enhancing user alignment with SCAN's functionality.
 
-- General User Requirements and Expectations
-- Desired Use Cases and Applications
-- Desired Features and Functionalities
-- Perceived Value and Potential Benefits
-- User Interface and Experience Preferences
-- Technological Proficiency and Current Tool Usage
-- Pain Points and Current Challenges
-- Security and Privacy Concerns
-- Accessibility and User Interface Preferences
-- Demographic Information
-- Pricing and Value Perception
+---
 
-# TrainingDatasets
+### **Cognitive Augmentation User Survey Evaluation.md**
+This markdown file contains the **Cognitive Augmentation User Survey Evaluation (CAUSE)**, designed to gather user insights to help improve the SCAN system to meet their needs and expectations.
 
-This directory contains several JSON lines files for training and validation data related to different PFC agents:
+#### **Survey Focus Areas:**
+1. **General User Requirements and Expectations**
+   - Desired use cases and applications
+   - Preferred features and functionalities
+2. **Perceived Value and Potential Benefits**
+   - User perceptions of SCAN's value and its role in cognitive augmentation.
+3. **User Interface and Experience Preferences**
+   - Insights into technological proficiency and current tool usage.
+   - Accessibility and interface design recommendations.
+4. **Pain Points and Challenges**
+   - Identification of areas where users face difficulties.
+5. **Security and Privacy Concerns**
+   - Gathering user preferences on data security and privacy policies.
+6. **Demographics and Pricing Perception**
+   - Understanding user demographics and their views on pricing.
 
-## ACC (Anterior Cingulate Cortex)
-- `TrainingDatasets\acc_training_data.jsonl`
-- `TrainingDatasets\acc_validation_data.jsonl`
+---
 
-## DLPFC (Dorsolateral Prefrontal Cortex)
-- `TrainingDatasets\dlpfc_training_data.jsonl`
-- `TrainingDatasets\dlpfc_validation_data.jsonl`
+## **Training Datasets**
 
-## mPFC (Medial Prefrontal Cortex)
-- `TrainingDatasets\mPFC_training_data.jsonl`
-- `TrainingDatasets\mPFC_validation_data.jsonl`
+This directory contains **JSON lines files** for training and validation data related to different PFC (Prefrontal Cortex) agents:
 
-## OFC (Orbitofrontal Cortex)
-- `TrainingDatasets\ofc_training_data.jsonl`
-- `TrainingDatasets\ofc_validation_data.jsonl`
+### **Available Datasets:**
+1. **ACC (Anterior Cingulate Cortex):**
+   - `TrainingDatasets\acc_training_data.jsonl`
+   - `TrainingDatasets\acc_validation_data.jsonl`
+2. **DLPFC (Dorsolateral Prefrontal Cortex):**
+   - `TrainingDatasets\dlpfc_training_data.jsonl`
+   - `TrainingDatasets\dlpfc_validation_data.jsonl`
+3. **mPFC (Medial Prefrontal Cortex):**
+   - `TrainingDatasets\mPFC_training_data.jsonl`
+   - `TrainingDatasets\mPFC_validation_data.jsonl`
+4. **OFC (Orbitofrontal Cortex):**
+   - `TrainingDatasets\ofc_training_data.jsonl`
+   - `TrainingDatasets\ofc_validation_data.jsonl`
+5. **vmPFC (Ventromedial Prefrontal Cortex):**
+   - `TrainingDatasets\vmpfc_training_data.jsonl`
+   - `TrainingDatasets\vmpfc_validation_data.jsonl`
 
-## vmPFC (Ventromedial Prefrontal Cortex)
-- `TrainingDatasets\vmpfc_training_data.jsonl`
-- `TrainingDatasets\vmpfc_validation_data.jsonl`
+Each dataset is designed to train and validate SCAN's cognitive agents to align their functionality with the corresponding areas of the human brain.
+
+---
+
+This repository serves as the foundational resource for advancing the SCAN system, aligning its capabilities with user needs, and training cognitive agents to replicate critical functions of the human prefrontal cortex.
+
