@@ -24,7 +24,7 @@
 
 ---
 
-## SCANAQ Numerical Scoring Breakdown
+# SCANAQ Numerical Scoring Breakdown
 
 ### Executive Function (EF)
 - **Questions**: 1-8
@@ -76,7 +76,7 @@
 - **Score Range**: 4-20
   - **4-12 points**: Low Empathy *(Difficulty relating to or understanding others.)*
   - **13-20 points**: High Empathy *(Strong feelings of care and concern for others.)*
-
+---
 # SCANAQ Numerical Scoring Breakdown by Rating
 
 | **Rating**                   | **Category**               | **Questions** | **Score Range**      | **Description**                                  | **Suggestions**                                                                                         |
