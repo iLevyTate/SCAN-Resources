@@ -285,7 +285,3 @@ This prompt enables synthetic data generation for training LLMs to simulate the 
 - Adheres to JSONL formatting standards  
 - Aligns with neuroscience and real-world user behavior  
 - Can be scaled for fine-tuning or multi-agent orchestration
-
----
-
-Let me know if you'd like this exported as a downloadable `.md` or `.pdf`. I can also immediately generate a batch of JSONL examples based on this file for any agent.  
