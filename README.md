@@ -19,6 +19,9 @@ This markdown file contains the **Synthetic Cognitive Augmentation Network Align
 - Perceived Stress
 - Empathy and Social Cognition
 
+### **Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ).pdf**
+PDF version of the SCANAQ questionnaire for easy distribution and printing.
+
 ---
 
 ### **SCANAQ Numerical Scoring Breakdown.md**
@@ -28,6 +31,9 @@ This file provides detailed information on **scoring and result interpretation**
 - **Scoring Breakdown**: A structured approach to categorize responses across cognitive and emotional dimensions.
 - **Result Interpretation**: Guidelines to understand the user's profile and align it with the SCAN system for personalized support.
 - **Suggestions**: Offers actionable recommendations for improvement based on each score range, enhancing user alignment with SCAN's functionality.
+
+### **SCANAQ Scoring Breakdown, Descriptions, and PFC-Inspired Suggestions.pdf**
+PDF version of the scoring breakdown with comprehensive descriptions and prefrontal cortex-inspired suggestions for cognitive enhancement.
 
 ---
 
@@ -52,26 +58,31 @@ This markdown file contains the **Cognitive Augmentation User Survey Evaluation 
 
 ---
 
+### **PFC Agent Training Data Generation Prompt.md**
+This file contains prompts and guidelines for generating training data specifically designed for Prefrontal Cortex (PFC) cognitive agents within the SCAN system.
+
+---
+
 ## **Training Datasets**
 
 This directory contains **JSON lines files** for training and validation data related to different PFC (Prefrontal Cortex) agents:
 
 ### **Available Datasets:**
 1. **ACC (Anterior Cingulate Cortex):**
-   - `TrainingDatasets\acc_training_data.jsonl`
-   - `TrainingDatasets\acc_validation_data.jsonl`
+   - `TrainingDatasets/acc_training_data.jsonl`
+   - `TrainingDatasets/acc_validation_data.jsonl`
 2. **DLPFC (Dorsolateral Prefrontal Cortex):**
-   - `TrainingDatasets\dlpfc_training_data.jsonl`
-   - `TrainingDatasets\dlpfc_validation_data.jsonl`
+   - `TrainingDatasets/dlpfc_training_data.jsonl`
+   - `TrainingDatasets/dlpfc_validation_data.jsonl`
 3. **mPFC (Medial Prefrontal Cortex):**
-   - `TrainingDatasets\mPFC_training_data.jsonl`
-   - `TrainingDatasets\mPFC_validation_data.jsonl`
+   - `TrainingDatasets/mPFC_training_data.jsonl`
+   - `TrainingDatasets/mPFC_validation_data.jsonl`
 4. **OFC (Orbitofrontal Cortex):**
-   - `TrainingDatasets\ofc_training_data.jsonl`
-   - `TrainingDatasets\ofc_validation_data.jsonl`
+   - `TrainingDatasets/ofc_training_data.jsonl`
+   - `TrainingDatasets/ofc_validation_data.jsonl`
 5. **vmPFC (Ventromedial Prefrontal Cortex):**
-   - `TrainingDatasets\vmpfc_training_data.jsonl`
-   - `TrainingDatasets\vmpfc_validation_data.jsonl`
+   - `TrainingDatasets/vmpfc_training_data.jsonl`
+   - `TrainingDatasets/vmpfc_validation_data.jsonl`
 
 Each dataset is designed to train and validate SCAN's cognitive agents to align their functionality with the corresponding areas of the human brain.
 
