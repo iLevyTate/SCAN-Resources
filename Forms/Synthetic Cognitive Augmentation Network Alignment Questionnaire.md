@@ -198,7 +198,7 @@ After submitting your responses:
 ---
 
 ## Feedback and Support
-Your experience is important to us. If you have any feedback on the SCANAQ or the SCAN system:
+Your experience is important to us. If you have any feedback on the SCANAQ or the SCAN system, please share it through the SCAN project repository (https://github.com/iLevyTate/SCAN-Resources) or the support channel provided by your implementer.
 
 ---
 
@@ -222,7 +222,3 @@ Thank you for taking the time to align your cognitive profile with the Synthetic
 ---
 
 **End of SCANAQ**
-
----
-
-Please let me know if you need any further adjustments or additional information!

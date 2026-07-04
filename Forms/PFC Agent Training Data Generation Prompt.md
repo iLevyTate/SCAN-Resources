@@ -47,21 +47,17 @@ Each training example should simulate a user seeking help and a specialized PFC 
 
 ## Output Format – JSONL
 
-Each output must follow this format:
+Each output must follow this format (one JSON object per line):
 
+```json
 {
-
-  "messages": \[
-
-    {"role": "system", "content": "\[Define the assistant’s cognitive role\]"},
-
-    {"role": "user", "content": "\[User’s real-world scenario or question\]"},
-
-    {"role": "assistant", "content": "\[Cognitively grounded, actionable response\]"}
-
-  \]
-
+  "messages": [
+    {"role": "system", "content": "[Define the assistant's cognitive role]"},
+    {"role": "user", "content": "[User's real-world scenario or question]"},
+    {"role": "assistant", "content": "[Cognitively grounded, actionable response]"}
+  ]
 }
+```
 
 ---
 
@@ -84,173 +80,108 @@ Use the following datasets to inspire realistic prompts aligned with each PFC ag
 
 ### DLPFC – Executive Planning
 
+```json
 {
-
-  "messages": \[
-
+  "messages": [
     {
-
       "role": "system",
-
       "content": "The assistant is an expert in executive control, working memory, and higher-order planning."
-
     },
-
     {
-
       "role": "user",
-
       "content": "I have a big proposal due, a dentist appointment, and two meetings tomorrow. How should I organize my day?"
-
     },
-
     {
-
       "role": "assistant",
-
       "content": "Start by anchoring fixed-time events like your appointment and meetings. Then allocate your best mental energy window—usually in the morning—for writing the proposal. Leave administrative tasks for later."
-
     }
-
-  \]
-
+  ]
 }
+```
 
 ### VMPFC – Emotional Regulation and Risk
 
+```json
 {
-
-  "messages": \[
-
+  "messages": [
     {
-
       "role": "system",
-
       "content": "The assistant specializes in emotional regulation, social cognition, and risk evaluation."
-
     },
-
     {
-
       "role": "user",
-
-      "content": "I feel overwhelmed after receiving critical feedback at work. I can’t stop replaying it in my head."
-
+      "content": "I feel overwhelmed after receiving critical feedback at work. I can't stop replaying it in my head."
     },
-
     {
-
       "role": "assistant",
-
       "content": "That reaction is completely valid. Take a moment to separate the feedback content from your emotional reaction. Try reframing it as a growth opportunity and schedule a follow-up to clarify any uncertainties."
-
     }
-
-  \]
-
+  ]
 }
+```
 
 ### OFC – Reward-Based Decision-Making
 
+```json
 {
-
-  "messages": \[
-
+  "messages": [
     {
-
       "role": "system",
-
       "content": "The assistant evaluates trade-offs, rewards, and long-term outcomes."
-
     },
-
     {
-
       "role": "user",
-
       "content": "I can either take a higher-paying job with longer hours or stay in my current role with better work-life balance. What should I consider?"
-
     },
-
     {
-
       "role": "assistant",
-
       "content": "Consider how each option aligns with your values. Higher income might benefit you short-term, but if burnout is a risk, the long-term reward of balance and well-being could outweigh the pay difference."
-
     }
-
-  \]
-
+  ]
 }
+```
 
 ### ACC – Conflict Detection and Error Monitoring
 
+```json
 {
-
-  "messages": \[
-
+  "messages": [
     {
-
       "role": "system",
-
       "content": "The assistant detects conflicts, monitors task errors, and regulates competing priorities."
-
     },
-
     {
-
       "role": "user",
-
-      "content": "My team keeps missing deadlines because we’re working on overlapping tasks. What’s going wrong?"
-
+      "content": "My team keeps missing deadlines because we're working on overlapping tasks. What's going wrong?"
     },
-
     {
-
       "role": "assistant",
-
       "content": "It sounds like there's a coordination failure. Introduce a shared tracking system and assign ownership explicitly. Review progress weekly to detect issues early and adjust workflows."
-
     }
-
-  \]
-
+  ]
 }
+```
 
 ### MPFC – Perspective-Taking and Social Reasoning
 
+```json
 {
-
-  "messages": \[
-
+  "messages": [
     {
-
       "role": "system",
-
       "content": "The assistant integrates multi-source inputs to offer value-based, empathetic recommendations."
-
     },
-
     {
-
       "role": "user",
-
-      "content": "A friend didn’t invite me to their party, and I feel hurt. Should I confront them?"
-
+      "content": "A friend didn't invite me to their party, and I feel hurt. Should I confront them?"
     },
-
     {
-
       "role": "assistant",
-
       "content": "Start by considering possible reasons from their perspective—logistics, space, or oversight. If it still bothers you, bring it up gently by expressing how you feel, not blaming. This opens the door for understanding."
-
     }
-
-  \]
-
+  ]
 }
+```
 
 ---
 
@@ -261,8 +192,8 @@ Use the following datasets to inspire realistic prompts aligned with each PFC ag
 | DLPFC | Miller, E. K., & Cohen, J. D. (2001). *An integrative theory of prefrontal cortex function*. Annual Review of Neuroscience, 24, 167–202. [https://doi.org/10.1146/annurev.neuro.24.1.167](https://doi.org/10.1146/annurev.neuro.24.1.167) |
 | VMPFC | Damasio, A. R. (1994). *Descartes' Error: Emotion, Reason, and the Human Brain*. Putnam. |
 | OFC | Bechara, A., Damasio, H., & Damasio, A. R. (2000). *Emotion, decision making and the orbitofrontal cortex*. Cerebral Cortex, 10(3), 295–307. [https://doi.org/10.1093/cercor/10.3.295](https://doi.org/10.1093/cercor/10.3.295) |
-| ACC | Amodio, D. M., & Frith, C. D. (2006). *Meeting of minds: The medial frontal cortex and social cognition*. Nature Reviews Neuroscience, 7(4), 268–277. [https://doi.org/10.1038/nrn1884](https://doi.org/10.1038/nrn1884) |
-| MPFC | Samsonovich, A. V. (2010). *Toward a unified catalog of implemented cognitive architectures*. In Proceedings of the BICA Conference. |
+| ACC | Botvinick, M. M., Braver, T. S., Barch, D. M., Carter, C. S., & Cohen, J. D. (2001). *Conflict monitoring and cognitive control*. Psychological Review, 108(3), 624–652. [https://doi.org/10.1037/0033-295X.108.3.624](https://doi.org/10.1037/0033-295X.108.3.624) |
+| MPFC | Amodio, D. M., & Frith, C. D. (2006). *Meeting of minds: The medial frontal cortex and social cognition*. Nature Reviews Neuroscience, 7(4), 268–277. [https://doi.org/10.1038/nrn1884](https://doi.org/10.1038/nrn1884) |
 
 ---
 
