@@ -90,7 +90,13 @@ forward, `raw_responses` is a mandatory field on every scored record.
   ACC content exercising its actual role — conflict monitoring, error detection, performance
   regulation — rose from 17% to 82% (training) and 11% to 76% (validation), with
   prioritization-only content falling from 53% to 2%.
-  ACC validation shrank from 80 to 50 records; total corpus 790 → 760.
+  ACC validation shrank from 80 to 50 records.
+- **vmPFC dataset regenerated.** Risk evaluation — one of its three defining functions — appeared in
+  only 18% of training and 24% of validation records. Now 48% and 62%, with social cognition also up
+  (45% → 63%, 39% → 58%). Emotional regulation fell in exchange, from 64% to 40% and 72% to 33%; the
+  three functions are now far more evenly represented (spread narrowed from ~47 points to ~26) and
+  total coverage held at 93–97%. Type-token ratio 0.33 / 0.37.
+- Total corpus 790 → 756 records.
 - Three defective records rewritten rather than deleted: two duplicate mPFC validation records, and
   an OFC record that shared a prompt verbatim with an mPFC record.
 
@@ -104,6 +110,11 @@ forward, `raw_responses` is a mandatory field on every scored record.
 - `scripts/score_scanaq.py` — executable reference implementation of scoring model 2.0.0, with the
   specification's worked example as a self-test.
 - `scripts/validate_datasets.py` — re-runnable checks for every dataset invariant.
+- `scripts/purge-pdf-metadata-from-history.sh` — prepared, not executed. Removes the appendix PDF
+  blobs carrying the author's legal name from git history. Dry-runs by default and stops short of
+  pushing, since rewriting published history forces every clone holder to re-clone.
+- `.github/workflows/validate.yml` — runs both scripts plus a raw-byte check that the appendix PDFs
+  have not regained identifying metadata, on every push and pull request.
 
 ### Security
 

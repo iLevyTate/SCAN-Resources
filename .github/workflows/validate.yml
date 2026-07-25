@@ -1,0 +1,50 @@
+name: Validate
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Verifies scoring model 2.0.0 against the worked example in
+      # Forms/SCANAQ Numerical Scoring Breakdown.md, plus regressions for the
+      # polarity, conflation, and reverse-keying bugs in model 1.0.0.
+      - name: SCANAQ scoring model
+        run: python3 scripts/score_scanaq.py
+
+      # Schema, per-region system prompts matching the generation-prompt spec,
+      # duplicates, train/validation leakage, cross-region overlap.
+      - name: Dataset invariants
+        run: python3 scripts/validate_datasets.py
+
+      # Near-duplicates and lexical diversity. mPFC and OFC are known to fail
+      # these and are not yet regenerated, so this reports without blocking.
+      - name: Dataset quality (non-blocking)
+        continue-on-error: true
+        run: python3 scripts/validate_datasets.py --strict
+
+      # The appendix PDFs must never regain identifying metadata. Checks raw
+      # bytes rather than the metadata dictionary, since XMP is a separate
+      # stream that a metadata-level read reports as clean.
+      - name: No identifying metadata in PDFs
+        run: |
+          found=0
+          for f in Forms/*.pdf; do
+            n=$(strings "$f" | grep -ciE 'kennedy|benjamin|ContentTypeId' || true)
+            if [ "$n" -ne 0 ]; then
+              echo "::error file=$f::$n identifying string(s) present"
+              found=1
+            fi
+          done
+          [ "$found" -eq 0 ] && echo "both PDFs clean"
+          exit $found

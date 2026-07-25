@@ -26,8 +26,8 @@ Exactly three messages in that order. No other keys at any level.
 | DLPFC — Dorsolateral | 66 | 46 | 112 | expert in executive control, working memory, and higher-order planning |
 | mPFC — Medial | 95 | 96 | 191 | integrates multi-source inputs to offer value-based, empathetic recommendations |
 | OFC — Orbitofrontal | 100 | 99 | 199 | evaluates trade-offs, rewards, and long-term outcomes |
-| vmPFC — Ventromedial | 55 | 54 | 109 | specializes in emotional regulation, social cognition, and risk evaluation |
-| **Total** | **415** | **345** | **760** | |
+| vmPFC — Ventromedial | 60 | 45 | 105 | specializes in emotional regulation, social cognition, and risk evaluation |
+| **Total** | **420** | **336** | **756** | |
 
 System prompts are verbatim from the role specification in
 `../Forms/PFC Agent Training Data Generation Prompt.md`. Each region uses exactly one, identical
@@ -35,8 +35,8 @@ across its training and validation splits — `../scripts/validate_datasets.py` 
 
 ## Provenance
 
-Synthetically generated. The ACC and DLPFC sets were regenerated in release 2.0.0; the remaining
-three date from the original corpus. See `../Forms/PFC Agent Training Data Generation Prompt.md` for
+Synthetically generated. The ACC, DLPFC, and vmPFC sets were regenerated in release 2.0.0; mPFC and OFC
+date from the original corpus. See `../Forms/PFC Agent Training Data Generation Prompt.md` for
 the generation methodology and the source datasets recommended for grounding scenarios.
 
 ## Validation
@@ -53,7 +53,7 @@ no prompt shared across regions.
 
 ## Known limitations
 
-**Validation splits are oversized.** They run 33–50% of each region's data against a conventional
+**Validation splits are oversized.** They run 30–50% of each region's data against a conventional
 10–20%. Rebalancing is deferred until content stabilizes, since it changes record counts.
 
 **mPFC and OFC overlap substantially.** Their thematic profiles are close — OFC carries a large
@@ -62,13 +62,13 @@ prompt pairs remain within each. Both are candidates for the regeneration alread
 and DLPFC.
 
 **Lexical diversity varies by region.** Type-token ratios: ACC 0.30/0.39, DLPFC 0.32/0.39,
-vmPFC 0.35/0.31, but mPFC 0.19/0.16 and OFC 0.17/0.17. The lower figures indicate formulaic
+vmPFC 0.33/0.37, but mPFC 0.19/0.16 and OFC 0.17/0.17. The lower figures indicate formulaic
 phrasing that will be reproduced by a model trained on them.
 
 **No human review.** Responses are plausible advice, not validated guidance, and have not been
 checked by domain experts.
 
-**Scale.** 760 records is small for instruction tuning. Suited to adapter-based fine-tuning or as a
+**Scale.** 756 records is small for instruction tuning. Suited to adapter-based fine-tuning or as a
 seed set, not to training from scratch.
 
 ## Intended use

@@ -69,7 +69,7 @@ Appendix B of the published paper**, frozen as the archived record.
 
 ## Training Datasets
 
-JSONL training and validation data for five PFC agents — **760 records**, 415 training and 345
+JSONL training and validation data for five PFC agents — **756 records**, 420 training and 336
 validation.
 
 | Region | Cognitive role | Train | Val |
@@ -78,7 +78,7 @@ validation.
 | **DLPFC** — Dorsolateral | Executive control, working memory, higher-order planning | 66 | 46 |
 | **mPFC** — Medial | Perspective-taking, social inference, value-based recommendation | 95 | 96 |
 | **OFC** — Orbitofrontal | Reward evaluation, decision optimization, outcome prediction | 100 | 99 |
-| **vmPFC** — Ventromedial | Emotional regulation, risk evaluation, affective reasoning | 55 | 54 |
+| **vmPFC** — Ventromedial | Emotional regulation, risk evaluation, affective reasoning | 60 | 45 |
 
 Each region uses exactly one system prompt, taken verbatim from the generation-prompt specification
 and identical across its splits. See [`TrainingDatasets/README.md`](TrainingDatasets/README.md) for
