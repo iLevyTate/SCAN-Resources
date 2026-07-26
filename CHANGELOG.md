@@ -94,16 +94,16 @@ forward, `raw_responses` is a mandatory field on every scored record.
   | DLPFC | 112 | Type-token ratio 0.106 → 0.285 training, 0.094 → 0.466 validation; most common opening trigram fell from 27% of responses to ~1% |
   | ACC | 149 | Content exercising conflict monitoring, error detection, or performance regulation rose from 17% to 82% training and 11% to 76% validation; prioritization-only content fell from 53% to 2% |
   | vmPFC | 105 | Risk evaluation 18% → 48% training and 24% → 62% validation; emotional regulation fell in exchange (64% → 40%, 72% → 33%), narrowing the spread across its three functions from ~47 points to ~26 |
-  | mPFC | 88 | Rebuilt around mentalizing: 52% → 82% of responses reason about another person's beliefs, intent, or values |
-  | OFC | 74 | Rebuilt around option comparison: 30% → 68% of responses evaluate trade-offs, expected value, or predicted outcomes |
+  | mPFC | 133 | Rebuilt around mentalizing: 52% → 83% of responses reason about another person's beliefs, intent, or values |
+  | OFC | 128 | Rebuilt around option comparison: 30% → 66% of responses evaluate trade-offs, expected value, or predicted outcomes |
 
   **mPFC and OFC had collapsed into each other** — the original failure. Their profiles are now
-  clearly distinct: mPFC 82% mentalizing against 11% trade-off content, OFC 68% trade-off against
-  36% mentalizing.
+  clearly distinct: mPFC 83% mentalizing against 14% trade-off content, OFC 66% trade-off against
+  35% mentalizing.
 
-  **The corpus shrank from 790 records to 528.** Regeneration prioritized role fidelity and lexical
-  diversity over volume; mPFC and OFC took the largest cuts (191 → 88, 199 → 74) because much of
-  their original content was near-duplicate or belonged to the other region.
+  **The corpus shrank from 790 records to 627**, concentrated in mPFC (191 → 133) and OFC
+  (199 → 128), where much of the original content was near-duplicate phrasing or belonged to the
+  other region. Validation sets are 21–29 records — the right ratio, but thin in absolute terms.
 
 - Every agent's system prompt realigned to the role specification in
   `Forms/PFC Agent Training Data Generation Prompt.md`. None of the ten files had matched it, and
@@ -117,6 +117,7 @@ forward, `raw_responses` is a mandatory field on every scored record.
   and must be confirmed against the source publications.
 - `NOTICE.md` — scopes the MIT grant to original content, disclaiming third-party item text.
 - `CITATION.cff`, `Forms/ARCHIVE.md`, this changelog.
+- Version header on the CAUSE survey, which is versioned independently of the SCANAQ.
 - `scripts/score_scanaq.py` — executable reference implementation of scoring model 2.0.0, with the
   specification's worked example as a self-test.
 - `scripts/validate_datasets.py` — re-runnable checks for every dataset invariant.
