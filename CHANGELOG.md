@@ -105,8 +105,10 @@ forward, `raw_responses` is a mandatory field on every scored record.
   diversity over volume; mPFC and OFC took the largest cuts (191 → 88, 199 → 74) because much of
   their original content was near-duplicate or belonged to the other region.
 
-- Three defective records rewritten rather than deleted: two duplicate mPFC validation records, and
-  an OFC record that shared a prompt verbatim with an mPFC record.
+- Every agent's system prompt realigned to the role specification in
+  `Forms/PFC Agent Training Data Generation Prompt.md`. None of the ten files had matched it, and
+  four of five agents claimed "emotional regulation" — a function the specification assigns to
+  vmPFC alone.
 
 ### Added
 
