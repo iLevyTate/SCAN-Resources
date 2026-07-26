@@ -69,16 +69,16 @@ Appendix B of the published paper**, frozen as the archived record.
 
 ## Training Datasets
 
-JSONL training and validation data for five PFC agents — **756 records**, 420 training and 336
-validation.
+JSONL training and validation data for five PFC agents — **528 records**, 425 training and 103
+validation, split 80/20 in every region.
 
 | Region | Cognitive role | Train | Val |
 |---|---|---:|---:|
-| **ACC** — Anterior Cingulate | Conflict monitoring, error detection, performance regulation | 99 | 50 |
-| **DLPFC** — Dorsolateral | Executive control, working memory, higher-order planning | 66 | 46 |
-| **mPFC** — Medial | Perspective-taking, social inference, value-based recommendation | 95 | 96 |
-| **OFC** — Orbitofrontal | Reward evaluation, decision optimization, outcome prediction | 100 | 99 |
-| **vmPFC** — Ventromedial | Emotional regulation, risk evaluation, affective reasoning | 60 | 45 |
+| **ACC** — Anterior Cingulate | Conflict monitoring, error detection, performance regulation | 120 | 29 |
+| **DLPFC** — Dorsolateral | Executive control, working memory, higher-order planning | 90 | 22 |
+| **mPFC** — Medial | Perspective-taking, social inference, value-based recommendation | 71 | 17 |
+| **OFC** — Orbitofrontal | Reward evaluation, decision optimization, outcome prediction | 60 | 14 |
+| **vmPFC** — Ventromedial | Emotional regulation, risk evaluation, affective reasoning | 84 | 21 |
 
 Each region uses exactly one system prompt, taken verbatim from the generation-prompt specification
 and identical across its splits. See [`TrainingDatasets/README.md`](TrainingDatasets/README.md) for

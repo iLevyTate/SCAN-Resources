@@ -22,12 +22,12 @@ Exactly three messages in that order. No other keys at any level.
 
 | Region | Training | Validation | Total | System prompt |
 |---|---:|---:|---:|---|
-| ACC — Anterior Cingulate | 99 | 50 | 149 | detects conflicts, monitors task errors, and regulates competing priorities |
-| DLPFC — Dorsolateral | 66 | 46 | 112 | expert in executive control, working memory, and higher-order planning |
-| mPFC — Medial | 95 | 96 | 191 | integrates multi-source inputs to offer value-based, empathetic recommendations |
-| OFC — Orbitofrontal | 100 | 99 | 199 | evaluates trade-offs, rewards, and long-term outcomes |
-| vmPFC — Ventromedial | 60 | 45 | 105 | specializes in emotional regulation, social cognition, and risk evaluation |
-| **Total** | **420** | **336** | **756** | |
+| ACC — Anterior Cingulate | 120 | 29 | 149 | detects conflicts, monitors task errors, and regulates competing priorities |
+| DLPFC — Dorsolateral | 90 | 22 | 112 | expert in executive control, working memory, and higher-order planning |
+| mPFC — Medial | 71 | 17 | 88 | integrates multi-source inputs to offer value-based, empathetic recommendations |
+| OFC — Orbitofrontal | 60 | 14 | 74 | evaluates trade-offs, rewards, and long-term outcomes |
+| vmPFC — Ventromedial | 84 | 21 | 105 | specializes in emotional regulation, social cognition, and risk evaluation |
+| **Total** | **425** | **103** | **528** | |
 
 System prompts are verbatim from the role specification in
 `../Forms/PFC Agent Training Data Generation Prompt.md`. Each region uses exactly one, identical
@@ -35,8 +35,8 @@ across its training and validation splits — `../scripts/validate_datasets.py` 
 
 ## Provenance
 
-Synthetically generated. The ACC, DLPFC, and vmPFC sets were regenerated in release 2.0.0; mPFC and OFC
-date from the original corpus. See `../Forms/PFC Agent Training Data Generation Prompt.md` for
+Synthetically generated. All five regions were regenerated in release 2.0.0 against their
+role specifications. See `../Forms/PFC Agent Training Data Generation Prompt.md` for
 the generation methodology and the source datasets recommended for grounding scenarios.
 
 ## Validation
@@ -53,22 +53,20 @@ no prompt shared across regions.
 
 ## Known limitations
 
-**Validation splits are oversized.** They run 30–50% of each region's data against a conventional
-10–20%. Rebalancing is deferred until content stabilizes, since it changes record counts.
+**Small corpus.** Regeneration prioritized role fidelity and diversity over volume, so the corpus
+shrank from 790 records to 528. mPFC and OFC took the largest reductions (191 → 88 and 199 → 74),
+because much of their original content was near-duplicate or belonged to the other region.
 
-**mPFC and OFC overlap substantially.** Their thematic profiles are close — OFC carries a large
-share of social content and mPFC a large share of trade-off content — and several near-duplicate
-prompt pairs remain within each. Both are candidates for the regeneration already applied to ACC
-and DLPFC.
+**Single-turn only.** Every record is one exchange. Nothing here trains multi-turn behaviour,
+clarifying questions, or context carried across turns.
 
-**Lexical diversity varies by region.** Type-token ratios: ACC 0.30/0.39, DLPFC 0.32/0.39,
-vmPFC 0.33/0.37, but mPFC 0.19/0.16 and OFC 0.17/0.17. The lower figures indicate formulaic
-phrasing that will be reproduced by a model trained on them.
+**Synthetic throughout.** No record derives from a real user interaction, so the scenario
+distribution reflects what was imagined rather than what users actually ask.
 
 **No human review.** Responses are plausible advice, not validated guidance, and have not been
 checked by domain experts.
 
-**Scale.** 756 records is small for instruction tuning. Suited to adapter-based fine-tuning or as a
+**Scale.** 528 records is small for instruction tuning. Suited to adapter-based fine-tuning or as a
 seed set, not to training from scratch.
 
 ## Intended use
