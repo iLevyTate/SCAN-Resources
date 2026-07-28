@@ -54,3 +54,12 @@ Do **not** regenerate these files in place. Publish new ones under new filenames
 (`Appendix-A-SCANAQ-v2.0.pdf`, `Appendix-B-Scoring-v2.0.pdf`) from appendix-scoped sources, and
 leave the originals as the archived record. Silently replacing a published appendix makes this
 repository disagree with the literature that cites it.
+
+## Corrected Appendix B (2.0.0)
+
+`Appendix-B-Scoring-v2.0.md` is a corrected, publication-ready Appendix B built from
+`SCANAQ Numerical Scoring Breakdown.md`. It exists as a new file, per the rule above — the original
+1.0.0 PDF is left untouched as the archived record. A corrigendum request the author can send to the
+publisher accompanies it at `../Corrections/corrigendum-appendix-B.md`. Appendix A is **not** yet
+replaced: it reproduces third-party instrument items whose reuse terms have to be settled first (see
+`../PROVENANCE.md` and `../NOTICE.md`).
