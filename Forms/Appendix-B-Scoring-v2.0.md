@@ -7,7 +7,8 @@
 | **Replaces** | Appendix B as published (scoring model 1.0.0) |
 
 > **This appendix replaces the published Appendix B**, which used scoring model 1.0.0 and produced
-> incorrect profiles in four of eight sections (A, B, C, and — for totals — G and H). The
+> incorrect profiles in four of eight sections (A, B, C, E), with two further sections (G, H)
+> yielding incorrect section totals. The
 > **item text, item counts, and response scales in Appendix A are unchanged**; only the scoring and
 > interpretation of those responses is corrected. Profiles produced with the published Appendix B
 > must be **rescored from the raw item responses** — the old profile codes cannot be mechanically
@@ -54,6 +55,22 @@ facets to support reliable subscales.
 > **Correction.** The published table assigned the *lowest* score range (8–13) the label
 > "Difficulty initiating and planning tasks" and the *highest* (14–24) "Strong working memory." All
 > eight items are deficit-worded, so 8 is the least-impaired score: the interpretation was inverted.
+
+**Content pointers (not scored).** For each item answered `3` (Often), emit a plain restatement of
+what the respondent reported. These are restatements, not measurements — a single item cannot support
+a facet-level claim such as "working memory is impaired," so do not aggregate, score, or threshold
+them.
+
+| Item | Pointer |
+|---|---|
+| Q1 | Reports frequent difficulty getting started on tasks |
+| Q2 | Reports frequently forgetting instructions |
+| Q3 | Reports frequent difficulty controlling emotions |
+| Q4 | Reports frequent careless mistakes |
+| Q5 | Reports frequently getting stuck on one approach |
+| Q6 | Reports frequent difficulty planning ahead |
+| Q7 | Reports frequent difficulty organizing tasks |
+| Q8 | Reports frequent difficulty tracking belongings |
 
 ---
 
@@ -162,9 +179,9 @@ Anchor 3 ("Moderately True"). *(Unchanged from the published appendix.)*
 
 **Scale** 1 (Never) – 5 (Very Often) · **Range** 3–15 · **Higher = more perceived stress.**
 
-> **Reverse-key Q32** (`6 − raw`) before summing. Q32 ("…how often have you felt that things were
-> going your way?") is positively worded — reporting that things often went one's way indicates
-> *less* stress.
+> **Reverse-key Q32** (`6 − raw`) before summing. Q32 is the one positively-worded item in this
+> section — reporting that things often went one's way indicates *less* stress — so it runs opposite
+> to the section's direction.
 
 Bands unchanged from the published appendix; the inputs are now correct.
 
@@ -187,8 +204,8 @@ Bands unchanged from the published appendix; the inputs are now correct.
 **Scale** 1 (Does Not Describe Me Well) – 5 (Describes Me Very Well) · **Higher = more of the named
 construct.**
 
-> **Reverse-key Q35** (`6 − raw`) before use. Q35 ("I sometimes find it difficult to see things from
-> the other person's point of view") is worded opposite to the section's direction.
+> **Reverse-key Q35** (`6 − raw`) before use. Q35 is a reverse-worded perspective-taking item —
+> phrased opposite to the section's direction.
 
 **Three separate outputs** — empathic concern, perspective taking, and fantasy are distinct
 constructs and are not summed into one another.
@@ -203,10 +220,9 @@ constructs and are not summed into one another.
 reported for continuity with the published single High/Low Empathy output. It is a convenience index,
 not a construct; prefer the separate outputs.
 
-> **Corrections.** (1) Q35 was summed raw. (2) Fantasy (Q36) was folded into an empathy total; it
-> measures imaginative transportation into fiction, not empathy, and is now reported separately.
-> (3) The published description claimed this section measures "personal distress"; no item does, and
-> the claim has been removed.
+> **Corrections.** (1) Q35 was summed raw. (2) Fantasy (Q36) was folded into the empathy total; it
+> measures imaginative transportation into fiction rather than empathy, and is now reported
+> separately.
 
 ---
 
@@ -229,7 +245,7 @@ not a construct; prefer the separate outputs.
 | 3 | B — Emotion Regulation | Split into reappraisal and suppression subscales; two previously unreachable profiles restored. |
 | 4 | B, C | Two-dimensional labels no longer derived from a single sum. |
 | 5 | G, H | Q32 and Q35 reverse-keyed (`6 − raw`) before summing. |
-| 6 | H — Empathy | "Personal distress" claim removed; fantasy separated from empathy. |
+| 6 | H — Empathy | Fantasy (Q36) separated from the empathy total; no longer counted toward empathy. |
 | 7 | E — Decision-Making | Tie rule added for the 43.4% of patterns previously undefined. |
 | 8 | all | Missing-data rule added; band boundaries derived from named anchors; section renamed "Executive Functioning" for consistency with Appendix A. |
 

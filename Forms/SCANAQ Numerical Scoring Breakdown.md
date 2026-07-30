@@ -49,10 +49,10 @@ Deficit-worded sections (A, C, G) score upward toward difficulty; capability-wor
 Two items are worded opposite to their section's direction and are transformed as
 `reversed = (scale_max + scale_min) − raw` before entering any total:
 
-| Item | Text | Section | Transform |
+| Item | Description | Section | Transform |
 |---|---|---|---|
-| **Q32** | "…how often have you felt that things were going your way?" | G Perceived Stress | `6 − raw` |
-| **Q35** | "I sometimes find it difficult to see things from the other person's point of view." | H Empathy | `6 − raw` |
+| **Q32** | Positively-worded stress item — higher raw indicates *less* stress | G Perceived Stress | `6 − raw` |
+| **Q35** | Reverse-worded perspective-taking item | H Empathy | `6 − raw` |
 
 Summing these raw — as scoring model 1.0.0 did — inverts their contribution.
 

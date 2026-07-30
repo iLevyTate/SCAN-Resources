@@ -56,16 +56,15 @@ or undefined:
 Two further sections produce **incorrect totals** (though the band labels were unaffected in the
 published version):
 
-5. **Sections G (Perceived Stress) and H (Empathy) — reverse-keyed items summed raw.** Q32 ("…things
-   were going your way") and Q35 ("difficult to see things from the other person's point of view")
-   are worded opposite to their sections' direction and must be transformed (`6 − raw`) before
+5. **Sections G (Perceived Stress) and H (Empathy) — reverse-keyed items summed raw.** Q32 (a
+   positively-worded item in the stress section) and Q35 (a reverse-worded item in the empathy
+   section) run opposite to their sections' direction and must be transformed (`6 − raw`) before
    summing. The published Global Note ("scores are summed within each section") shows they were
    summed raw, shifting those section totals by up to 4 points.
 
-The corrected Appendix B also removes an unsupported description in Section H (the published text
-refers to "personal distress," which no item measures), separates the Fantasy item (Q36) from the
-empathy total, and adds an explicit missing-data rule. A complete list is in the *Summary of
-corrections* at the end of the attached file.
+The corrected Appendix B also separates the Fantasy item (Q36) from the empathy total — it measures
+imaginative transportation into fiction rather than empathy — and adds an explicit missing-data rule.
+A complete list is in the *Summary of corrections* at the end of the attached file.
 
 ## Effect on results already produced
 
@@ -74,16 +73,21 @@ responses** using the corrected scoring. The old profile codes cannot be mechani
 because in the affected sections the underlying subscale values were never computed. Where only a
 profile code was retained (without the raw responses), it cannot be migrated.
 
-## Authoritative version and a minor citation fix
+## Authoritative version and reference-list corrections
 
 The corrected scoring model is maintained openly in the SCAN-Resources repository, archived on Zenodo
 under concept DOI [10.5281/zenodo.14053202](https://doi.org/10.5281/zenodo.14053202), with a full
 changelog of the corrections. The attached appendix is a publication-ready extract of it.
 
-While preparing this request I also noticed that the reference-list entry for the SCAN-Resources
-deposit (Tate, 2024c) gives a **truncated DOI** — `10.5281/zenodo.140532` — which does not resolve.
-The correct DOI is **10.5281/zenodo.14053202**. If the corrigendum can also correct that link, I
-would appreciate it.
+While preparing this request I also noticed three reference-list issues that could be corrected in the
+same pass:
+
+- The entry for the SCAN-Resources deposit (Tate, 2024c) gives a **truncated DOI** —
+  `10.5281/zenodo.140532`, which does not resolve. The correct DOI is **10.5281/zenodo.14053202**.
+- **Ostrau et al. (2022)** is cited in the text six times, including in the Abstract, but has **no
+  entry in the reference list**, so readers cannot locate it.
+- **Tate (2025a)** and **Tate (2025b)** are listed as two distinct works (STAC V1 and V2) but carry
+  the **identical DOI** `10.5281/zenodo.15867066`; one of the two appears to need its own.
 
 Please let me know what you need from me to proceed, and whether there is a preferred format for the
 replacement appendix.
