@@ -109,6 +109,11 @@ forward, `raw_responses` is a mandatory field on every scored record.
   `Forms/PFC Agent Training Data Generation Prompt.md`. None of the ten files had matched it, and
   four of five agents claimed "emotional regulation" — a function the specification assigns to
   vmPFC alone.
+- **vmPFC: five mental-health-referral records added** (training 84 → 88, validation 21 → 22; corpus
+  627 → 632). On prompts signalling sustained or escalating distress — persistent low mood, worsening
+  panic, escalating use of alcohol to cope — the agent now models pointing toward professional
+  support, a coverage gap a content audit found in the regenerated set. Calibrated to avoid
+  prescribing therapy for ordinary stress, which would be its own failure mode.
 
 ### Added
 

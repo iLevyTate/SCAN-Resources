@@ -7,10 +7,10 @@
 > Each row is marked with its verification status. Confirm every entry before publishing, citing, or
 > redistributing this instrument.
 
-The SCANAQ is an **ad-hoc composite**. Of its 36 items, 33 appear to be drawn or adapted from seven
-established psychometric instruments (three to eight items per source); the three Risk Propensity
-items (Section D) have no identified source. This document records what those sources appear to be,
-what was changed, and what reuse terms apply.
+The SCANAQ is an **ad-hoc composite**. Of its 36 items, 33 map to seven established psychometric
+instruments (three to eight items per source); the remaining three (Section D, Risk Propensity) are
+attributed by the published paper to an eighth — GRiPS — recorded below as an unverified lead. This
+document records what those sources appear to be, what was changed, and what reuse terms apply.
 
 ## Why this matters
 
@@ -33,11 +33,11 @@ what was changed, and what reuse terms apply.
 | **A** Executive Functioning | 1–8 | BRIEF-family (Behavior Rating Inventory of Executive Function) | **UNVERIFIED — HIGH PRIORITY** | **Commercial.** Published by PAR Inc.; not free to reuse. |
 | **B** Emotion Regulation | 9–12 | ERQ — Emotion Regulation Questionnaire (Gross & John, 2003) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
 | **C** Impulsivity | 13–18 | BIS-11 — Barratt Impulsiveness Scale (Patton, Stanford & Barratt, 1995) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
-| **D** Risk Propensity | 19–21 | General risk-propensity items; specific source not identified | UNVERIFIED | Unknown. |
+| **D** Risk Propensity | 19–21 | GRiPS — General Risk Propensity Scale (Zhang, Highhouse & Nye, 2019); attributed in the published paper's reference list, not yet matched item-by-item | **UNVERIFIED — lead only** | Journal-published; customarily free for research use with citation (confirm). |
 | **E** Decision-Making Style | 22–26 | GDMS — General Decision-Making Style (Scott & Bruce, 1995) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
 | **F** Self-Efficacy | 27–29 | GSE — General Self-Efficacy Scale (Schwarzer & Jerusalem, 1995) | UNVERIFIED | Generally free for research use with citation. |
 | **G** Perceived Stress | 30–32 | PSS — Perceived Stress Scale (Cohen, Kamarck & Mermelstein, 1983) | UNVERIFIED | Not public domain; permission terms apply. |
-| **H** Empathy & Social Cognition | 33–36 | IRI — Interpersonal Reactivity Index (Davis, 1980, 1983) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
+| **H** Empathy and Social Cognition | 33–36 | IRI — Interpersonal Reactivity Index (Davis, 1980, 1983) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
 
 ---
 

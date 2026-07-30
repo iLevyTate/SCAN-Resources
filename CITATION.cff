@@ -15,6 +15,9 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.14053202
     description: Concept DOI — always resolves to the latest version
+  # The 2.0.0 version DOI is pending: it will be added when the new Zenodo
+  # version is published. Until then, the concept DOI above is the only one
+  # available to cite, despite the message's version-DOI guidance.
 repository-code: https://github.com/iLevyTate/SCAN-Resources
 abstract: >-
   Resources for the Synthetic Cognitive Augmentation Network (SCAN): the

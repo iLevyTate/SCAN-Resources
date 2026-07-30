@@ -58,7 +58,7 @@ EXPECTED_COUNTS = {
     "dlpfc_training_data.jsonl": 90, "dlpfc_validation_data.jsonl": 22,
     "mPFC_training_data.jsonl": 107, "mPFC_validation_data.jsonl": 26,
     "ofc_training_data.jsonl": 103, "ofc_validation_data.jsonl": 25,
-    "vmpfc_training_data.jsonl": 84, "vmpfc_validation_data.jsonl": 21,
+    "vmpfc_training_data.jsonl": 88, "vmpfc_validation_data.jsonl": 22,
 }
 
 NEAR_DUP_RATIO = 0.90
