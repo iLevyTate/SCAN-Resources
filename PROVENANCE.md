@@ -7,9 +7,10 @@
 > Each row is marked with its verification status. Confirm every entry before publishing, citing, or
 > redistributing this instrument.
 
-The SCANAQ is an **ad-hoc composite**. Its 36 items appear to be drawn or adapted from seven
-established psychometric instruments, one to eight items per source. This document records what
-those sources appear to be, what was changed, and what reuse terms apply.
+The SCANAQ is an **ad-hoc composite**. Of its 36 items, 33 appear to be drawn or adapted from seven
+established psychometric instruments (three to eight items per source); the three Risk Propensity
+items (Section D) have no identified source. This document records what those sources appear to be,
+what was changed, and what reuse terms apply.
 
 ## Why this matters
 

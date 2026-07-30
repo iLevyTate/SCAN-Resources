@@ -65,12 +65,20 @@ Appendix B of the published paper**, frozen as the archived record.
 > **Appendix B documents scoring model 1.0.0 and contains known errors.** The markdown is
 > authoritative. See [`Forms/ARCHIVE.md`](Forms/ARCHIVE.md).
 
+### `Appendix-B-Scoring-v2.0.md`
+A corrected, publication-ready replacement for the published Appendix B, built from the current
+scoring model. The original 1.0.0 PDF is left intact as the archived record.
+
+### `Corrections/corrigendum-appendix-B.md`
+A draft corrigendum request the author can send to the publisher, documenting the Appendix B scoring
+errors and offering the corrected appendix as the replacement.
+
 ---
 
 ## Training Datasets
 
 JSONL training and validation data for five PFC agents — **627 records**, 504 training and 123
-validation, split 80/20 in every region.
+validation, split ≈80/20 in every region.
 
 | Region | Cognitive role | Train | Val |
 |---|---|---:|---:|
@@ -78,7 +86,7 @@ validation, split 80/20 in every region.
 | **DLPFC** — Dorsolateral | Executive control, working memory, higher-order planning | 90 | 22 |
 | **mPFC** — Medial | Perspective-taking, social inference, value-based recommendation | 107 | 26 |
 | **OFC** — Orbitofrontal | Reward evaluation, decision optimization, outcome prediction | 103 | 25 |
-| **vmPFC** — Ventromedial | Emotional regulation, risk evaluation, affective reasoning | 84 | 21 |
+| **vmPFC** — Ventromedial | Emotional regulation, social cognition, risk evaluation | 84 | 21 |
 
 Each region uses exactly one system prompt, taken verbatim from the generation-prompt specification
 and identical across its splits. See [`TrainingDatasets/README.md`](TrainingDatasets/README.md) for

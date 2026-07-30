@@ -86,8 +86,8 @@ forward, `raw_responses` is a mandatory field on every scored record.
 - Suggestion text from the archived Appendix B — richer than the markdown's — carried forward
   rather than discarded.
 - **All five datasets regenerated** against their role specifications, and every split rebalanced
-  to 80/20 (previously 30–50% validation). The corpus now passes `--strict` with zero warnings —
-  no near-duplicates and no type-token ratio below threshold, in any file.
+  to ≈80/20 — 19.5–20% validation, from a previous ~40–50%. The corpus now passes `--strict` with
+  zero warnings — no near-duplicates and no type-token ratio below threshold, in any file.
 
   | Region | Records | What changed |
   |---|---|---|
@@ -126,6 +126,9 @@ forward, `raw_responses` is a mandatory field on every scored record.
   pushing, since rewriting published history forces every clone holder to re-clone.
 - `.github/workflows/validate.yml` — runs both scripts plus a raw-byte check that the appendix PDFs
   have not regained identifying metadata, on every push and pull request.
+- `Forms/Appendix-B-Scoring-v2.0.md` — a publication-ready corrected Appendix B, and
+  `Corrections/corrigendum-appendix-B.md` — a draft corrigendum request for the published chapter,
+  whose Appendix B documents the incorrect scoring model 1.0.0.
 
 ### Security
 

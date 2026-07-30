@@ -7,9 +7,11 @@ grant does and does not cover.
 
 The original content of this repository:
 
-- The SCAN project documentation (`README.md`, this notice, `PROVENANCE.md`, `CHANGELOG.md`)
+- The SCAN project documentation (`README.md`, this notice, `PROVENANCE.md`, `CHANGELOG.md`,
+  `CITATION.cff`, `TrainingDatasets/README.md`, `Forms/ARCHIVE.md`, and `Corrections/`)
 - The **SCANAQ scoring model** — subscale structure, banding rules, profile-code taxonomy, and
-  scoring logic (`Forms/SCANAQ Numerical Scoring Breakdown.md`, `scripts/score_scanaq.py`)
+  scoring logic (`Forms/SCANAQ Numerical Scoring Breakdown.md`, `Forms/Appendix-B-Scoring-v2.0.md`,
+  `scripts/score_scanaq.py`)
 - The **Cognitive Augmentation User Survey Evaluation (CAUSE)** instrument
 - The **PFC agent training datasets** (`TrainingDatasets/*.jsonl`) and the generation prompt
   (`Forms/PFC Agent Training Data Generation Prompt.md`)
