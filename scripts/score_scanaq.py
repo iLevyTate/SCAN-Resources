@@ -31,6 +31,19 @@ SCALES = {
 # Items worded opposite to their section's direction (spec section 1.4).
 REVERSED = {32: 6, 35: 6}  # item -> (scale_max + scale_min)
 
+# Single-total band tables (sections scored as one summed total). Defined once
+# here and used by both score() and the self-test, so the test checks the
+# *declared* bands against the attainable score range rather than comparing an
+# expression to itself. Sections B (subscales), E (argmax, no total), and H's
+# subscales are not single-total and are handled inline in score().
+TOTAL_BANDS = {
+    "A": [(8, 13, "EF-LOW"), (14, 18, "EF-MOD"), (19, 24, "EF-HIGH")],
+    "C": [(6, 11, "IMP-SEV-LOW"), (12, 17, "IMP-SEV-MOD"), (18, 24, "IMP-SEV-HIGH")],
+    "D": [(3, 9, "RP-LOW"), (10, 15, "RP-HIGH")],
+    "F": [(3, 8, "SE-LOW"), (9, 12, "SE-HIGH")],
+    "G": [(3, 9, "PS-LOW"), (10, 15, "PS-HIGH")],
+}
+
 EF_POINTERS = {
     1: "Reports frequent difficulty getting started on tasks",
     2: "Reports frequently forgetting instructions",
@@ -82,7 +95,7 @@ def score(responses: dict[int, int]) -> dict:
     # --- A: Executive Functioning. Higher = more difficulty. Tertiles of 1-3.
     ef = subscale(responses, SCALES["A"][0])
     out["subscales"]["EF_total"] = ef
-    emit(band(ef, [(8, 13, "EF-LOW"), (14, 18, "EF-MOD"), (19, 24, "EF-HIGH")]))
+    emit(band(ef, TOTAL_BANDS["A"]))
     for item, text in EF_POINTERS.items():
         if responses.get(item) == 3:
             out["pointers"].append(text)
@@ -99,7 +112,7 @@ def score(responses: dict[int, int]) -> dict:
     # --- C: Impulsivity. Severity via tertiles of 1-4; subtype via per-item means.
     imp = subscale(responses, SCALES["C"][0])
     out["subscales"]["IMP_total"] = imp
-    emit(band(imp, [(6, 11, "IMP-SEV-LOW"), (12, 17, "IMP-SEV-MOD"), (18, 24, "IMP-SEV-HIGH")]))
+    emit(band(imp, TOTAL_BANDS["C"]))
 
     means = {}
     for name, items in (("IMP-ATT", [13]), ("IMP-MOT", [14, 15, 16]), ("IMP-NP", [17, 18])):
@@ -117,7 +130,7 @@ def score(responses: dict[int, int]) -> dict:
     # --- D: Risk Propensity. Neutral anchor 3 -> mean<=3 low.
     rp = subscale(responses, SCALES["D"][0])
     out["subscales"]["RP_total"] = rp
-    emit(band(rp, [(3, 9, "RP-LOW"), (10, 15, "RP-HIGH")]))
+    emit(band(rp, TOTAL_BANDS["D"]))
 
     # --- E: Decision-Making. No total; argmax with co-dominant ties.
     dm = {i: responses.get(i) for i in DM_STYLES}
@@ -131,12 +144,12 @@ def score(responses: dict[int, int]) -> dict:
     # --- F: Self-Efficacy. Anchor 3 ("Moderately True") -> mean<3 low.
     se = subscale(responses, SCALES["F"][0])
     out["subscales"]["SE_total"] = se
-    emit(band(se, [(3, 8, "SE-LOW"), (9, 12, "SE-HIGH")]))
+    emit(band(se, TOTAL_BANDS["F"]))
 
     # --- G: Perceived Stress. Q32 reverse-keyed by keyed().
     ps = subscale(responses, SCALES["G"][0])
     out["subscales"]["PS_total"] = ps
-    emit(band(ps, [(3, 9, "PS-LOW"), (10, 15, "PS-HIGH")]))
+    emit(band(ps, TOTAL_BANDS["G"]))
 
     # --- H: Empathy. Three separate outputs; Q35 reverse-keyed. Fantasy never summed.
     ec = subscale(responses, [33, 34])
@@ -148,6 +161,8 @@ def score(responses: dict[int, int]) -> dict:
     emit(band(fs, [(1, 3, "ESC-FS-LOW"), (4, 5, "ESC-FS-HIGH")]))
     if ec is not None and pt is not None:
         emit(band(ec + pt, [(3, 9, "ESC-EMPATHY-LOW"), (10, 15, "ESC-EMPATHY-HIGH")]))
+    else:
+        emit(NOT_SCORED)  # placeholder so codes keep fixed length/positions (spec 1.5)
 
     out["instrument_version"] = INSTRUMENT_VERSION
     out["scoring_model_version"] = SCORING_MODEL_VERSION
@@ -203,11 +218,15 @@ def main() -> int:
                  (r["subscales"]["ESC_EC"], r["subscales"]["ESC_PT"]), (9, 2))
     ok &= _check("3 EF pointers (Q1, Q5, Q6)", len(r["pointers"]), 3)
 
-    print("\nBand rule: every declared range equals its scale x item bound")
-    for sec, (items, lo, hi) in SCALES.items():
+    print("\nBand tables tile each section's full attainable score range")
+    for sec, bands in TOTAL_BANDS.items():
+        items, lo, hi = SCALES[sec]
         n = len(list(items))
-        ok &= _check(f"section {sec}: {n} items x {lo}-{hi} = {n*lo}-{n*hi}",
-                     (n * lo, n * hi), (n * lo, n * hi))
+        span = (min(b[0] for b in bands), max(b[1] for b in bands))
+        ok &= _check(f"section {sec}: bands span {n*lo}-{n*hi} (n items x scale)",
+                     span, (n * lo, n * hi))
+        contiguous = all(bands[i + 1][0] == bands[i][1] + 1 for i in range(len(bands) - 1))
+        ok &= _check(f"section {sec}: bands contiguous, no gaps or overlaps", contiguous, True)
 
     print("\nPolarity regression (the model 1.0.0 bugs)")
     best = {**{i: 1 for i in range(1, 9)}, **{i: 1 for i in range(13, 19)}}

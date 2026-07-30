@@ -47,6 +47,20 @@ EXPECTED_SYSTEM = {
     "mPFC": "The assistant integrates multi-source inputs to offer value-based, empathetic recommendations.",
 }
 
+# Expected record counts, kept in sync with the dataset cards (README.md and
+# TrainingDatasets/README.md). Hardcoded so an accidental drop or duplication
+# during regeneration fails CI rather than passing structurally while silently
+# contradicting the docs — the same rationale as EXPECTED_SYSTEM above. When
+# counts change intentionally, update the data, these values, and both READMEs
+# together.
+EXPECTED_COUNTS = {
+    "acc_training_data.jsonl": 120, "acc_validation_data.jsonl": 29,
+    "dlpfc_training_data.jsonl": 90, "dlpfc_validation_data.jsonl": 22,
+    "mPFC_training_data.jsonl": 107, "mPFC_validation_data.jsonl": 26,
+    "ofc_training_data.jsonl": 103, "ofc_validation_data.jsonl": 25,
+    "vmpfc_training_data.jsonl": 84, "vmpfc_validation_data.jsonl": 21,
+}
+
 NEAR_DUP_RATIO = 0.90
 MIN_TTR = 0.20
 
@@ -175,14 +189,36 @@ def check_duplicates(data) -> None:
                     seen[key] = lineno
 
 
+def _user_prompt(obj) -> str | None:
+    """User-prompt text, or None for a malformed record (already flagged by
+    check_schema). Lets the downstream checks skip it instead of crashing."""
+    try:
+        return obj["messages"][1]["content"]
+    except (KeyError, IndexError, TypeError):
+        return None
+
+
+def check_counts(data) -> None:
+    """Record counts match the dataset cards, so a silent drop or duplication
+    during regeneration fails CI rather than diverging from the READMEs."""
+    for name, expected in EXPECTED_COUNTS.items():
+        actual = len(data.get(name, []))
+        if actual != expected:
+            fail(f"{name}: {actual} records, expected {expected} "
+                 f"(reconcile the data, EXPECTED_COUNTS, and both READMEs)")
+
+
 def check_leakage(data) -> None:
     """No user prompt may appear in both a region's train and validation split."""
     for region in REGIONS:
         train = data.get(f"{region}_training_data.jsonl", [])
         val = data.get(f"{region}_validation_data.jsonl", [])
-        seen = {normalize(o["messages"][1]["content"]): ln for ln, o in train}
+        seen = {normalize(p): ln for ln, o in train if (p := _user_prompt(o)) is not None}
         for lineno, obj in val:
-            key = normalize(obj["messages"][1]["content"])
+            p = _user_prompt(obj)
+            if p is None:
+                continue
+            key = normalize(p)
             if key in seen:
                 fail(f"{region}: validation line {lineno} duplicates training "
                      f"line {seen[key]} (train/validation leakage)")
@@ -194,7 +230,10 @@ def check_cross_region(data) -> None:
     for name, records in data.items():
         region = name.split("_")[0]
         for lineno, obj in records:
-            index[normalize(obj["messages"][1]["content"])].append(f"{region} ({name}:{lineno})")
+            p = _user_prompt(obj)
+            if p is None:
+                continue
+            index[normalize(p)].append(f"{region} ({name}:{lineno})")
     for prompt, locations in index.items():
         regions = {loc.split(" ")[0] for loc in locations}
         if len(regions) > 1:
@@ -231,6 +270,7 @@ def main() -> int:
     data = load()
     check_schema(data)
     check_system_prompts(data)
+    check_counts(data)
     check_duplicates(data)
     check_leakage(data)
     check_cross_region(data)

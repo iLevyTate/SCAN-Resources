@@ -6,6 +6,10 @@ on:
   pull_request:
   workflow_dispatch:
 
+# Read-only: the job only runs checks, it never writes to the repo.
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -27,24 +31,31 @@ jobs:
       - name: Dataset invariants
         run: python3 scripts/validate_datasets.py
 
-      # Near-duplicates and lexical diversity. mPFC and OFC are known to fail
-      # these and are not yet regenerated, so this reports without blocking.
-      - name: Dataset quality (non-blocking)
-        continue-on-error: true
+      # Near-duplicate prompts and lexical diversity. All five regions pass as
+      # of the 2.0.0 regeneration; this gate is blocking so a future quality
+      # regression fails the build rather than sliding in green.
+      - name: Dataset quality (strict)
         run: python3 scripts/validate_datasets.py --strict
 
       # The appendix PDFs must never regain identifying metadata. Checks raw
       # bytes rather than the metadata dictionary, since XMP is a separate
       # stream that a metadata-level read reports as clean.
       - name: No identifying metadata in PDFs
+        shell: bash
         run: |
+          shopt -s nullglob
+          pdfs=(Forms/*.pdf)
+          if [ "${#pdfs[@]}" -lt 2 ]; then
+            echo "::error::expected the two appendix PDFs in Forms/, found ${#pdfs[@]} — guard cannot run"
+            exit 1
+          fi
           found=0
-          for f in Forms/*.pdf; do
+          for f in "${pdfs[@]}"; do
             n=$(strings "$f" | grep -ciE 'kennedy|benjamin|ContentTypeId' || true)
             if [ "$n" -ne 0 ]; then
-              echo "::error file=$f::$n identifying string(s) present"
+              echo "::error file=$f::$n matching line(s) with identifying metadata"
               found=1
             fi
           done
-          [ "$found" -eq 0 ] && echo "both PDFs clean"
+          [ "$found" -eq 0 ] && echo "both PDFs clean (${#pdfs[@]} checked)"
           exit $found
