@@ -1,0 +1,61 @@
+name: Validate
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+# Read-only: the job only runs checks, it never writes to the repo.
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Verifies scoring model 2.0.0 against the worked example in
+      # Forms/SCANAQ Numerical Scoring Breakdown.md, plus regressions for the
+      # polarity, conflation, and reverse-keying bugs in model 1.0.0.
+      - name: SCANAQ scoring model
+        run: python3 scripts/score_scanaq.py
+
+      # Schema, per-region system prompts matching the generation-prompt spec,
+      # duplicates, train/validation leakage, cross-region overlap.
+      - name: Dataset invariants
+        run: python3 scripts/validate_datasets.py
+
+      # Near-duplicate prompts and lexical diversity. All five regions pass as
+      # of the 2.0.0 regeneration; this gate is blocking so a future quality
+      # regression fails the build rather than sliding in green.
+      - name: Dataset quality (strict)
+        run: python3 scripts/validate_datasets.py --strict
+
+      # The appendix PDFs must never regain identifying metadata. Checks raw
+      # bytes rather than the metadata dictionary, since XMP is a separate
+      # stream that a metadata-level read reports as clean.
+      - name: No identifying metadata in PDFs
+        shell: bash
+        run: |
+          shopt -s nullglob
+          pdfs=(Forms/*.pdf)
+          if [ "${#pdfs[@]}" -lt 2 ]; then
+            echo "::error::expected the two appendix PDFs in Forms/, found ${#pdfs[@]} — guard cannot run"
+            exit 1
+          fi
+          found=0
+          for f in "${pdfs[@]}"; do
+            n=$(strings "$f" | grep -ciE 'kennedy|benjamin|ContentTypeId' || true)
+            if [ "$n" -ne 0 ]; then
+              echo "::error file=$f::$n matching line(s) with identifying metadata"
+              found=1
+            fi
+          done
+          [ "$found" -eq 0 ] && echo "both PDFs clean (${#pdfs[@]} checked)"
+          exit $found

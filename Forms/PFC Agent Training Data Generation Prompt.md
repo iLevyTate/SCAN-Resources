@@ -38,7 +38,7 @@ Each training example should simulate a user seeking help and a specialized PFC 
 | PFC Region | Cognitive Function |
 | :---- | :---- |
 | DLPFC (Dorsolateral) | Executive control, working memory, higher-order planning |
-| VMPFC (Ventromedial) | Emotional regulation, risk evaluation, affective reasoning |
+| VMPFC (Ventromedial) | Emotional regulation, social cognition, risk evaluation |
 | OFC (Orbitofrontal) | Reward evaluation, decision optimization, outcome prediction |
 | ACC (Anterior Cingulate) | Conflict monitoring, error detection, performance regulation |
 | MPFC (Medial Prefrontal) | Perspective-taking, social inference, value-based recommendation |

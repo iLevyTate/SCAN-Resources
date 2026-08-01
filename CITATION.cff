@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+title: >-
+  SCAN-Resources: Instruments and Training Datasets for the Synthetic
+  Cognitive Augmentation Network
+message: >-
+  If you use this repository, please cite it using the metadata below.
+  Cite the version DOI for the release you actually used, not the concept
+  DOI, so that the scoring model version is unambiguous.
+type: dataset
+authors:
+  - family-names: Tate
+    given-names: Levy
+    alias: iLevyTate
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.14053202
+    description: Concept DOI — always resolves to the latest version
+  # The 2.0.0 version DOI is pending: it will be added when the new Zenodo
+  # version is published. Until then, the concept DOI above is the only one
+  # available to cite, despite the message's version-DOI guidance.
+repository-code: https://github.com/iLevyTate/SCAN-Resources
+abstract: >-
+  Resources for the Synthetic Cognitive Augmentation Network (SCAN): the
+  SCANAQ alignment questionnaire and its scoring model, the CAUSE user
+  survey, a generation prompt for synthetic training dialogues, and JSONL
+  training and validation datasets for five prefrontal-cortex-simulating
+  agents (DLPFC, VMPFC, OFC, ACC, MPFC).
+keywords:
+  - cognitive augmentation
+  - prefrontal cortex
+  - multi-agent systems
+  - psychometrics
+  - fine-tuning datasets
+license: MIT
+version: 2.0.0
+date-released: 2026-07-25

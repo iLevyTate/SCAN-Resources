@@ -1,5 +1,15 @@
 # Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ)
 
+| | |
+|---|---|
+| **Instrument version** | 1.0.0 |
+| **Scored by** | Scoring model 2.0.0 — see `SCANAQ Numerical Scoring Breakdown.md` |
+| **Item text, item count, and response scales** | Frozen at 1.0.0 |
+
+> **Item provenance is unverified.** These items appear to derive from established psychometric
+> instruments whose reuse terms have not been confirmed. See `../PROVENANCE.md` and `../NOTICE.md`
+> before administering or redistributing this questionnaire.
+
 ## Introduction
 Welcome to the Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ). This assessment is designed to evaluate various aspects of your cognitive functioning and personal preferences to align the Synthetic Cognitive Augmentation Network (SCAN) system with your unique needs. By understanding your cognitive profile, SCAN can provide personalized support to enhance your decision-making, problem-solving, and emotional regulation capabilities.
 
@@ -147,12 +157,53 @@ The Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ) is
 - **Decision-Making Style:** Identifies rational, intuitive, dependent, avoidant, and spontaneous decision-making approaches.
 - **Self-Efficacy:** Assesses confidence in handling difficult situations.
 - **Perceived Stress:** Evaluates stress levels over the past month.
-- **Empathy and Social Cognition:** Measures empathic concern, personal distress, perspective-taking, and fantasy.
+- **Empathy and Social Cognition:** Measures empathic concern, perspective-taking, and fantasy.
+
+---
+
+## Sources and Attribution
+
+The SCANAQ is an **ad-hoc composite**. Its 36 items appear to be drawn or adapted from seven
+established psychometric instruments, using between three and eight items from each.
+
+| Section | Items | Apparent source | Status |
+|---|---|---|---|
+| A Executive Functioning | 1–8 | BRIEF-family | **UNVERIFIED — commercially licensed (PAR Inc.)** |
+| B Emotion Regulation | 9–12 | ERQ (Gross & John, 2003) | UNVERIFIED |
+| C Impulsivity | 13–18 | BIS-11 (Patton, Stanford & Barratt, 1995) | UNVERIFIED |
+| D Risk Propensity | 19–21 | Source not identified | UNVERIFIED |
+| E Decision-Making Style | 22–26 | GDMS (Scott & Bruce, 1995) | UNVERIFIED |
+| F Self-Efficacy | 27–29 | GSE (Schwarzer & Jerusalem, 1995) | UNVERIFIED |
+| G Perceived Stress | 30–32 | PSS (Cohen, Kamarck & Mermelstein, 1983) | UNVERIFIED |
+| H Empathy and Social Cognition | 33–36 | IRI (Davis, 1980, 1983) | UNVERIFIED |
+
+**These attributions have not been confirmed against the source publications.** They were identified
+by wording correspondence and response-scale matching during a repository audit. See
+`../PROVENANCE.md` for adaptations made, required verification steps, and reuse terms, and
+`../NOTICE.md` for how the repository's MIT license relates to third-party item text.
+
+**Section scores are not the source instruments' scores.** Item subsets were used and Section G was
+re-anchored from the PSS's native 0–4 to 1–5. Published norms, cutoffs, and percentile tables from
+the source instruments do not apply.
 
 ---
 
 ## Scoring and Interpretation
 Your responses will be analyzed to create a personalized cognitive alignment profile. This profile will inform how the SCAN system can best support and enhance your cognitive functions, providing customized assistance in decision-making, problem-solving, and emotional regulation.
+
+Scoring is defined by **scoring model 2.0.0** in `SCANAQ Numerical Scoring Breakdown.md`. Note that:
+
+- Two items (**Q32** and **Q35**) are reverse-keyed and must be transformed before summing.
+- Sections B, C, and H are scored as **separate subscales**, not as section totals.
+- Section E produces **no cumulative score** — its five items belong to five different subscales.
+- Skipped items are **not imputed**; any subscale with an unanswered item is reported as
+  `not_scored` rather than estimated.
+
+**Store raw item responses.** Profile codes are derived and disposable; raw responses are the only
+record that survives a change to the scoring model.
+
+**The SCANAQ has not been validated.** Reliability and validity have not been tested for this
+composite, and reliability is undefined for the sections scored from a single item.
 
 ---
 

@@ -1,5 +1,14 @@
 # Cognitive Augmentation User Survey Evaluation (CAUSE)
 
+| | |
+|---|---|
+| **Instrument version** | 1.0.0 |
+| **Status** | Current |
+
+CAUSE is versioned independently of the SCANAQ. Item text, item count, and response options are
+frozen at 1.0.0; changing any of them invalidates previously collected responses. See
+`../CHANGELOG.md` for the version bump rules.
+
 ## Introduction
 
 Thank you for participating in the Cognitive Augmentation User Survey Evaluation (CAUSE)! Your insights will help us develop the Synthetic Cognitive Augmentation Network (SCAN) to meet user needs and expectations. The survey consists of approximately 50 questions and should take about 15–20 minutes to complete. Your responses are confidential and will contribute to creating a tool that better supports complex decision-making.
