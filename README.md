@@ -8,9 +8,9 @@ dialogues, and JSONL datasets for five prefrontal-cortex-simulating agents.
 
 | | |
 |---|---|
-| **Instrument version** | 1.0.0 |
+| **Instrument version** | 2.0.0 |
 | **Scoring model version** | 2.0.0 |
-| **Release** | 2.0.0 — see [`CHANGELOG.md`](CHANGELOG.md) |
+| **Release** | *Unreleased* — see [`CHANGELOG.md`](CHANGELOG.md) |
 
 > **Read before using the SCANAQ.** Two things materially affect whether this instrument is
 > appropriate for your purpose:
@@ -33,8 +33,9 @@ cognitive functioning and preferences in order to align SCAN with a user's profi
 - Executive Functioning · Emotion Regulation · Impulsivity · Risk Propensity
 - Decision-Making Style · Self-Efficacy · Perceived Stress · Empathy and Social Cognition
 
-Item text, item count, and response scales are **frozen at instrument version 1.0.0**. Changing any
-of them invalidates previously collected responses and requires an instrument version bump.
+Item text, item count, and response scales are **frozen at instrument version 2.0.0** (Sections A and
+D were reworded from 1.0.0 to remove reproduced source-instrument text). Changing any of them
+invalidates previously collected responses and requires an instrument version bump.
 
 ### `SCANAQ Numerical Scoring Breakdown.md`
 **Scoring model 2.0.0** — authoritative. Defines how responses become a cognitive alignment profile:
@@ -110,7 +111,7 @@ Standard library only, no dependencies.
 
 | Release | Instrument | Scoring model | DOI |
 |---|---|---|---|
-| 2.0.0 | 1.0.0 | 2.0.0 | *(pending — publish a new Zenodo version)* |
+| *Unreleased* | 2.0.0 | 2.0.0 | *(pending — create a GitHub release to mint the version DOI)* |
 | 1.0.0 | 1.0.0 | 1.0.0 | archived under the concept DOI |
 
 The badge above points at the **concept DOI**, which always resolves to the newest version. **Papers

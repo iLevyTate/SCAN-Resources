@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import sys
 
-INSTRUMENT_VERSION = "1.0.0"
+INSTRUMENT_VERSION = "2.0.0"  # current instrument; scoring applies to 1.0.0 and 2.0.0 alike
 SCORING_MODEL_VERSION = "2.0.0"
 
 # Section -> (items, scale_min, scale_max). Frozen at instrument 1.0.0.

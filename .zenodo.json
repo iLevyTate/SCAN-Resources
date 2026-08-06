@@ -1,0 +1,24 @@
+{
+  "upload_type": "dataset",
+  "title": "SCAN-Resources: Instruments and Training Datasets for the Synthetic Cognitive Augmentation Network",
+  "creators": [
+    { "name": "Tate, Levy" }
+  ],
+  "description": "Resources for the Synthetic Cognitive Augmentation Network (SCAN): the SCANAQ alignment questionnaire (instrument 2.0.0) and its scoring model (2.0.0), the CAUSE user survey, a generation prompt for synthetic training dialogues, and JSONL training/validation datasets for five prefrontal-cortex-simulating agents (DLPFC, VMPFC, OFC, ACC, MPFC). See CHANGELOG.md for version history and PROVENANCE.md for item-source attributions.",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "cognitive augmentation",
+    "prefrontal cortex",
+    "multi-agent systems",
+    "psychometrics",
+    "fine-tuning datasets"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.14053202",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    }
+  ]
+}

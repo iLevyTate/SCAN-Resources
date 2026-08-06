@@ -21,10 +21,11 @@ The original content of this repository:
 
 **Third-party questionnaire item text reproduced or adapted in the SCANAQ.**
 
-The 36 SCANAQ items appear to derive from established psychometric instruments — including the
-BRIEF-family, ERQ, BIS-11, GDMS, GSE, PSS, IRI, and (per the published paper) GRiPS — which remain
-the property of their respective copyright holders. See `PROVENANCE.md` for the section-by-section
-breakdown.
+Most SCANAQ items appear to derive from established psychometric instruments — ERQ, BIS-11, GDMS,
+GSE, PSS, and IRI — which remain the property of their respective copyright holders. **Sections A and
+D were independently reworded in instrument 2.0.0** to measure the BRIEF-family and GRiPS constructs
+without reproducing source text; that original wording is MIT-covered, though the underlying
+constructs derive from those instruments. See `PROVENANCE.md` for the section-by-section breakdown.
 
 **These attributions are unverified.** They were identified during a repository audit by wording
 correspondence and response-scale matching, and have not been confirmed against the source
