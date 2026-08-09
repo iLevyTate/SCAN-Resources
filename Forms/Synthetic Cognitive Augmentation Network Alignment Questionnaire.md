@@ -29,14 +29,14 @@ Welcome to the Synthetic Cognitive Augmentation Network Alignment Questionnaire 
 - 2 - Sometimes
 - 3 - Often
 
-1. Getting myself to begin a task is harder than it should be.
-2. Instructions slip from my memory shortly after I receive them.
-3. Holding my emotions in check is difficult for me.
-4. Careless slips show up in my work when I am not watching closely.
-5. I find it hard to move off an approach once I have settled into it.
-6. Thinking through the steps of something in advance does not come easily.
-7. Arranging my tasks into a workable order is a struggle.
-8. I lose track of where I have put everyday items.
+1. Starting a task is hard for me.
+2. Instructions don't stick in my head.
+3. I struggle to keep my emotions in check.
+4. Small mistakes slip past me.
+5. Changing my approach is tough.
+6. I'm not good at planning ahead.
+7. My tasks end up disorganized.
+8. I lose track of where I put things.
 
 ---
 
@@ -81,9 +81,9 @@ Welcome to the Synthetic Cognitive Augmentation Network Alignment Questionnaire 
 - 4 - Agree
 - 5 - Strongly Agree
 
-19. I find the idea of taking risks appealing.
-20. In everyday choices, I tend toward the riskier option.
-21. A readiness to take risks is central to how I live.
+19. I like taking risks.
+20. I take chances day to day.
+21. Taking risks matters a lot to me.
 
 ---
 
