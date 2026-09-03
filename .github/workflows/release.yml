@@ -1,0 +1,121 @@
+name: Release
+
+# Cuts a GitHub release from a tag, which is what Zenodo's integration listens for.
+# Run it from the Actions tab (or `gh workflow run release.yml -f tag=2.0.0`) once the
+# version bump is on main.
+#
+# Tags here are bare, matching the existing releases (`1.1.0`), though a leading `v` is
+# accepted and stripped.
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to create and release, e.g. 2.0.0"
+        required: true
+        type: string
+      prerelease:
+        description: "Mark as a pre-release"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Full history so the tag lands on a real commit, not a shallow stub.
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check the tag does not already exist
+        run: |
+          if git rev-parse -q --verify "refs/tags/${{ inputs.tag }}" >/dev/null; then
+            echo "::error::Tag ${{ inputs.tag }} already exists."
+            exit 1
+          fi
+
+      - name: Verify the tag matches the version in the tree
+        # A release whose tag disagrees with CITATION.cff is worse than no release: the
+        # Zenodo deposit and the "cite this" metadata would name different versions, and
+        # the scoring model version is exactly what a citation of this repository has to
+        # pin down. This repo has no .zenodo.json, so CITATION.cff is the sole source.
+        run: |
+          expected="${{ inputs.tag }}"
+          expected="${expected#v}"
+          # Match the top-level `version:` key only (column 0), so nested keys cannot be
+          # picked up instead.
+          cff=$(python3 -c 'import re,pathlib; m=re.search(r"^version:\s*\"?([^\"\s]+)\"?\s*$", pathlib.Path("CITATION.cff").read_text(), re.M); print(m.group(1) if m else "")')
+          if [ "$cff" != "$expected" ]; then
+            echo "::error::CITATION.cff declares version '$cff', but the tag is '$expected'."
+            exit 1
+          fi
+          echo "Version $expected matches CITATION.cff."
+
+      # Publishing a release archives this tree to Zenodo permanently, so re-run the
+      # repository's own gates first rather than trusting that main was green when it
+      # merged. The PDF metadata guard is the one that cannot be walked back after the
+      # fact: a deposit carrying identifying metadata in the appendix PDFs is public and
+      # minted with a DOI.
+      - name: Re-run the repository's validation gates
+        run: |
+          python3 scripts/score_scanaq.py
+          python3 scripts/validate_datasets.py
+          python3 scripts/validate_datasets.py --strict
+
+      - name: No identifying metadata in the appendix PDFs
+        shell: bash
+        run: |
+          shopt -s nullglob
+          pdfs=(Forms/*.pdf)
+          if [ "${#pdfs[@]}" -lt 2 ]; then
+            echo "::error::expected the two appendix PDFs in Forms/, found ${#pdfs[@]} — guard cannot run"
+            exit 1
+          fi
+          found=0
+          for f in "${pdfs[@]}"; do
+            n=$(strings "$f" | grep -ciE 'kennedy|benjamin|ContentTypeId' || true)
+            if [ "$n" -ne 0 ]; then
+              echo "::error file=$f::$n matching line(s) with identifying metadata"
+              found=1
+            fi
+          done
+          [ "$found" -eq 0 ] && echo "both PDFs clean (${#pdfs[@]} checked)"
+          exit $found
+
+      - name: Extract the changelog section for this version
+        id: notes
+        run: |
+          version="${{ inputs.tag }}"
+          version="${version#v}"
+          # The section runs from its own heading to the next version heading. The headings
+          # use an em dash ("## [2.0.0] — 2026-07-25"), so match the bracketed version only.
+          awk -v v="$version" '
+            $0 ~ "^## \\[" v "\\]" { found = 1; next }
+            found && /^## \[/ { exit }
+            found { print }
+          ' CHANGELOG.md > release-notes.md
+          if [ ! -s release-notes.md ]; then
+            echo "::error::No CHANGELOG.md section found for $version."
+            exit 1
+          fi
+          echo "Extracted $(wc -l < release-notes.md) lines of release notes."
+
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ inputs.tag }}" \
+            --title "${{ inputs.tag }}" \
+            --notes-file release-notes.md \
+            --target "${{ github.sha }}" \
+            ${{ inputs.prerelease && '--prerelease' || '' }}
+          echo "### Released [${{ inputs.tag }}](${{ github.server_url }}/${{ github.repository }}/releases/tag/${{ inputs.tag }})" >> "$GITHUB_STEP_SUMMARY"
