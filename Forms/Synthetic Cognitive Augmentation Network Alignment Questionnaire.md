@@ -2,13 +2,16 @@
 
 | | |
 |---|---|
-| **Instrument version** | 1.0.0 |
+| **Instrument version** | 2.0.0 |
 | **Scored by** | Scoring model 2.0.0 — see `SCANAQ Numerical Scoring Breakdown.md` |
-| **Item text, item count, and response scales** | Frozen at 1.0.0 |
+| **Item text, item count, and response scales** | Frozen at 2.0.0 |
 
-> **Item provenance is unverified.** These items appear to derive from established psychometric
-> instruments whose reuse terms have not been confirmed. See `../PROVENANCE.md` and `../NOTICE.md`
-> before administering or redistributing this questionnaire.
+> **Item provenance.** Sections A (Executive Functioning) and D (Risk Propensity) were **independently
+> reworded in instrument 2.0.0** to measure the same constructs without reproducing source-instrument
+> text — Section A's constructs are those of the BRIEF family (PAR Inc.) and Section D's those of the
+> GRiPS. The remaining sections still appear to derive from established instruments whose reuse terms
+> are **unverified**. Reworded items do not carry the source instruments' validation. See
+> `../PROVENANCE.md` and `../NOTICE.md` before administering or redistributing this questionnaire.
 
 ## Introduction
 Welcome to the Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ). This assessment is designed to evaluate various aspects of your cognitive functioning and personal preferences to align the Synthetic Cognitive Augmentation Network (SCAN) system with your unique needs. By understanding your cognitive profile, SCAN can provide personalized support to enhance your decision-making, problem-solving, and emotional regulation capabilities.
@@ -26,14 +29,14 @@ Welcome to the Synthetic Cognitive Augmentation Network Alignment Questionnaire 
 - 2 - Sometimes
 - 3 - Often
 
-1. I have trouble getting started on tasks.
-2. I forget instructions easily.
-3. I have trouble keeping my emotions under control.
-4. I make careless mistakes.
-5. I get stuck on one way of doing things.
-6. I have trouble planning ahead.
-7. I have difficulty organizing my tasks.
-8. I have trouble keeping track of my belongings.
+1. Starting a task is hard for me.
+2. Instructions don't stick in my head.
+3. I struggle to keep my emotions in check.
+4. Small mistakes slip past me.
+5. Changing my approach is tough.
+6. I'm not good at planning ahead.
+7. My tasks end up disorganized.
+8. I lose track of where I put things.
 
 ---
 
@@ -78,9 +81,9 @@ Welcome to the Synthetic Cognitive Augmentation Network Alignment Questionnaire 
 - 4 - Agree
 - 5 - Strongly Agree
 
-19. I enjoy taking risks in general.
-20. I often take risks in my daily life.
-21. Taking risks is an important part of my life.
+19. I like taking risks.
+20. I take chances day to day.
+21. Taking risks matters a lot to me.
 
 ---
 
@@ -163,22 +166,25 @@ The Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ) is
 
 ## Sources and Attribution
 
-The SCANAQ is an **ad-hoc composite**. Its 36 items appear to be drawn or adapted from seven
-established psychometric instruments, using between three and eight items from each.
+The SCANAQ is an **ad-hoc composite**. In instrument 2.0.0, Sections A and D were reworded to measure
+their constructs without reproducing source text; the other six sections' items still appear drawn or
+adapted from established instruments (three to eight items each).
 
-| Section | Items | Apparent source | Status |
+| Section | Items | Source relationship | Status |
 |---|---|---|---|
-| A Executive Functioning | 1–8 | BRIEF-family | **UNVERIFIED — commercially licensed (PAR Inc.)** |
+| A Executive Functioning | 1–8 | Reworded 2.0.0; construct basis BRIEF-family (PAR Inc.) | Original wording (construct only) |
 | B Emotion Regulation | 9–12 | ERQ (Gross & John, 2003) | UNVERIFIED |
 | C Impulsivity | 13–18 | BIS-11 (Patton, Stanford & Barratt, 1995) | UNVERIFIED |
-| D Risk Propensity | 19–21 | Source not identified | UNVERIFIED |
+| D Risk Propensity | 19–21 | Reworded 2.0.0; construct basis GRiPS (Zhang, Highhouse & Nye, 2019) | Original wording (construct only) |
 | E Decision-Making Style | 22–26 | GDMS (Scott & Bruce, 1995) | UNVERIFIED |
 | F Self-Efficacy | 27–29 | GSE (Schwarzer & Jerusalem, 1995) | UNVERIFIED |
 | G Perceived Stress | 30–32 | PSS (Cohen, Kamarck & Mermelstein, 1983) | UNVERIFIED |
 | H Empathy and Social Cognition | 33–36 | IRI (Davis, 1980, 1983) | UNVERIFIED |
 
-**These attributions have not been confirmed against the source publications.** They were identified
-by wording correspondence and response-scale matching during a repository audit. See
+**The Section B, C, E, F, G, H attributions have not been confirmed against the source
+publications.** They were identified by wording correspondence and response-scale matching during a
+repository audit. Sections A and D are reworded original items measuring the named constructs (which
+are not copyrightable); their wording is not from the source instruments. See
 `../PROVENANCE.md` for adaptations made, required verification steps, and reuse terms, and
 `../NOTICE.md` for how the repository's MIT license relates to third-party item text.
 

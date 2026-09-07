@@ -21,6 +21,35 @@ Every scored output should record both.
 
 ---
 
+## [Unreleased]
+
+Instrument version: **1.0.0 → 2.0.0** (MAJOR) · Scoring model: **2.0.0** (unchanged)
+
+> Assign a release number when you cut the release. This carries the un-published 2.0.0 scoring
+> corrections plus the instrument rework below, so it supersedes the pending 2.0.0 release.
+
+### Changed
+
+- **Sections A (Executive Functioning) and D (Risk Propensity) reworded** to remove reproduced
+  source-instrument text. Their items were independently rewritten to measure the same constructs —
+  the BRIEF family (PAR Inc.) and the GRiPS respectively — so no third-party item text is reproduced
+  in the live instrument. Item count, response scales, section order, and the scoring model are
+  unchanged, so `scripts/score_scanaq.py` and every band still apply; only the item wording changed.
+  This is a MAJOR instrument change: it invalidates comparability with instrument 1.0.0 responses.
+  The reworded items do **not** carry the source instruments' validation, and rewording is a
+  good-faith non-infringing remedy, not a substitute for legal review (BRIEF/PAR especially). The
+  archived Appendix A PDF is untouched — it remains the published 1.0.0 record.
+- `PROVENANCE.md` and `NOTICE.md` updated: Sections A and D are now original wording (construct basis
+  cited), no longer reproductions; the remaining sections stay reproduced-or-adapted and unverified.
+
+### Added
+
+- `.zenodo.json` — controls the metadata of the Zenodo record minted on the next GitHub release
+  (author "Levy Tate", title, description, license, concept-DOI link), so the deposit is not left to
+  Zenodo's auto-detection.
+
+---
+
 ## [2.0.0] — 2026-07-25
 
 Instrument version: **1.0.0** (unchanged) · Scoring model: **1.0.0 → 2.0.0** (MAJOR)

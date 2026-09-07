@@ -7,10 +7,12 @@
 > Each row is marked with its verification status. Confirm every entry before publishing, citing, or
 > redistributing this instrument.
 
-The SCANAQ is an **ad-hoc composite**. Of its 36 items, 33 map to seven established psychometric
-instruments (three to eight items per source); the remaining three (Section D, Risk Propensity) are
-attributed by the published paper to an eighth — GRiPS — recorded below as an unverified lead. This
-document records what those sources appear to be, what was changed, and what reuse terms apply.
+The SCANAQ is an **ad-hoc composite**. In **instrument 2.0.0**, Sections A (Executive Functioning)
+and D (Risk Propensity) were independently reworded to measure their constructs — the BRIEF family
+and the GRiPS respectively — **without reproducing source text**. The remaining 25 items (Sections B,
+C, E, F, G, H) still appear drawn or adapted from six established instruments, three to eight items
+per source, and their reuse terms are **unverified**. This document records what those sources appear
+to be, what was changed, and what reuse terms apply.
 
 ## Why this matters
 
@@ -30,10 +32,10 @@ document records what those sources appear to be, what was changed, and what reu
 
 | Section | Items | Apparent source | Verification | Reuse terms |
 |---|---|---|---|---|
-| **A** Executive Functioning | 1–8 | BRIEF-family (Behavior Rating Inventory of Executive Function) | **UNVERIFIED — HIGH PRIORITY** | **Commercial.** Published by PAR Inc.; not free to reuse. |
+| **A** Executive Functioning | 1–8 | Construct basis: BRIEF family (PAR Inc.). **Reworded in 2.0.0 — no source text reproduced.** | Reworded (construct only) | Original wording, MIT. Constructs are not copyrightable; BRIEF's item *text* is PAR's and is not reproduced. |
 | **B** Emotion Regulation | 9–12 | ERQ — Emotion Regulation Questionnaire (Gross & John, 2003) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
 | **C** Impulsivity | 13–18 | BIS-11 — Barratt Impulsiveness Scale (Patton, Stanford & Barratt, 1995) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
-| **D** Risk Propensity | 19–21 | GRiPS — General Risk Propensity Scale (Zhang, Highhouse & Nye, 2019); attributed in the published paper's reference list, not yet matched item-by-item | **UNVERIFIED — lead only** | Journal-published; customarily free for research use with citation (confirm). |
+| **D** Risk Propensity | 19–21 | Construct basis: GRiPS (Zhang, Highhouse & Nye, 2019). **Reworded in 2.0.0 — no source text reproduced.** | Reworded (construct only) | Original wording, MIT. |
 | **E** Decision-Making Style | 22–26 | GDMS — General Decision-Making Style (Scott & Bruce, 1995) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
 | **F** Self-Efficacy | 27–29 | GSE — General Self-Efficacy Scale (Schwarzer & Jerusalem, 1995) | UNVERIFIED | Generally free for research use with citation. |
 | **G** Perceived Stress | 30–32 | PSS — Perceived Stress Scale (Cohen, Kamarck & Mermelstein, 1983) | UNVERIFIED | Not public domain; permission terms apply. |
@@ -90,26 +92,19 @@ B share variance by construction.
 
 ## Required actions
 
-1. **Verify every row above against the source publications.** Determine for each whether SCANAQ
-   items are *verbatim*, *adapted*, or *independently written*. This distinction is dispositive for
-   licensing.
-2. **Resolve Section A first.** BRIEF is commercially licensed by PAR Inc. and is the only
-   identified source with a commercial rights holder. The wording is short and generic
-   ("I have trouble getting started on tasks"), so it may be paraphrase rather than reproduction —
-   and that determination decides everything downstream. Options, in order of preference:
-   1. Confirm the items are original or sufficiently paraphrased, and document that finding here.
-   2. Obtain written permission from PAR Inc.
-   3. Replace Section A with a freely-licensed executive-function measure — this changes item text
-      and therefore requires an **instrument** version bump to 2.0.0, invalidating previously
-      collected Section A responses.
-
-   *Do not add a BRIEF citation before this determination is made.* Citing the instrument while
-   MIT-licensing its items asserts reproduction rather than avoiding it.
-3. **Add full citations** for every confirmed source, in this file and in the questionnaire's
-   Sources and Attribution section.
-4. **Confirm PSS permission terms**, which are more restrictive than the other journal-published
-   instruments.
-5. **Identify the Section D source**, or confirm the items are original.
+1. **Sections A and D are resolved by rewording (instrument 2.0.0).** Their items were independently
+   rewritten to measure the BRIEF-family and GRiPS constructs without reproducing source text — the
+   commercial exposure (BRIEF / PAR Inc.) is the reason A was done first. Two caveats stand:
+   rewording is the standard non-infringing remedy but **is not a substitute for legal review** — a
+   very close paraphrase of a short item can still be a derivative work, and the BRIEF items warrant
+   a careful eye — and the reworded items do **not** carry the source instruments' validation.
+2. **Verify the remaining sections (B, C, E, F, G, H) against the source publications.** Determine
+   for each whether the SCANAQ items are *verbatim*, *adapted*, or *independently written* — the
+   distinction is dispositive for licensing. These remain reproduced-or-adapted and unverified. The
+   same rework remedy is available for any that turn out to be reproductions.
+3. **Confirm PSS permission terms** (Section G), which are more restrictive than the other
+   journal-published instruments.
+4. **Add full citations** for every confirmed source, in this file and in the questionnaire.
 
 ---
 

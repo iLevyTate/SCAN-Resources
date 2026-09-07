@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Scoring model version** | 2.0.0 |
-| **Applies to instrument version** | 1.0.0 (SCANAQ, 36 items, 8 sections) |
+| **Applies to instrument version** | 1.0.0 and 2.0.0 (SCANAQ, 36 items, 8 sections) |
 | **Status** | Current — authoritative |
 | **Supersedes** | Scoring model 1.0.0 (see [Appendix 1](#appendix-1--migration-from-scoring-model-100)) |
 
@@ -300,7 +300,7 @@ Every scored result must carry:
 
 ```json
 {
-  "instrument_version": "1.0.0",
+  "instrument_version": "2.0.0",
   "scoring_model_version": "2.0.0",
   "scored_at": "<ISO-8601>",
   "raw_responses": { "Q1": 2, "Q2": 1, "…": "…", "Q36": 4 },
