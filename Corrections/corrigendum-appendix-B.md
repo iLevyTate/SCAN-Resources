@@ -1,5 +1,13 @@
 # Corrigendum request — Appendix B scoring model
 
+> **Superseded.** The chapter this corrects also needs its STAC V1 account corrected (tracked in
+> [iLevyTate/stac](https://github.com/iLevyTate/stac)). Both corrections target the same chapter
+> DOI, so they go as one letter: `docs/corrigendum-combined.md` in that repository, which carries
+> this file's Part II and reference-list items verbatim and is signed under the chapter byline.
+> That letter cannot be sent until this repository's 2.0.0 release is deposited on Zenodo, since
+> the concept DOI below currently resolves to 1.1.0 and the uncorrected scoring. This file is kept
+> as the source it was merged from.
+
 > **Draft for the author to send.** Fill the bracketed fields, attach `Appendix-B-Scoring-v2.0.md`
 > (or a PDF rendering of it), and send to the volume editors / publisher's production contact.
 > Nothing here is submitted automatically.
