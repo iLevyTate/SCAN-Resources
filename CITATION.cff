@@ -15,9 +15,12 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.14053202
     description: Concept DOI — always resolves to the latest version
-  # The 2.0.0 version DOI is pending: it will be added when the new Zenodo
-  # version is published. Until then, the concept DOI above is the only one
-  # available to cite, despite the message's version-DOI guidance.
+  - type: doi
+    value: 10.5281/zenodo.22598618
+    description: Version DOI for 2.0.0 (instrument 2.0.0, scoring model 2.0.0; released 2026-09-07)
+  - type: doi
+    value: 10.5281/zenodo.16711302
+    description: Version DOI for 1.1.0 (instrument 1.0.0, scoring model 1.0.0; released 2025-08-02)
 repository-code: https://github.com/iLevyTate/SCAN-Resources
 abstract: >-
   Resources for the Synthetic Cognitive Augmentation Network (SCAN): the
@@ -33,4 +36,4 @@ keywords:
   - fine-tuning datasets
 license: MIT
 version: 2.0.0
-date-released: 2026-07-25
+date-released: 2026-09-07
