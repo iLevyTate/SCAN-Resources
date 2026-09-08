@@ -21,14 +21,20 @@ Every scored output should record both.
 
 ---
 
-## [Unreleased]
+## [2.0.0] — 2026-09-07
 
-Instrument version: **1.0.0 → 2.0.0** (MAJOR) · Scoring model: **2.0.0** (unchanged)
+Instrument version: **1.0.0 → 2.0.0** (MAJOR) · Scoring model: **1.0.0 → 2.0.0** (MAJOR)
 
-> Assign a release number when you cut the release. This carries the un-published 2.0.0 scoring
-> corrections plus the instrument rework below, so it supersedes the pending 2.0.0 release.
+Released 2026-09-07 as GitHub release `2.0.0` from commit 2155c39 and deposited on Zenodo as
+version DOI [10.5281/zenodo.22598618](https://doi.org/10.5281/zenodo.22598618) (concept DOI
+10.5281/zenodo.14053202). The tree that shipped carries both halves of this entry: the
+instrument rework merged in PR #5, and the scoring-model corrections drafted on 2026-07-25 that
+had been waiting on a release. The release notes on GitHub were extracted from the scoring-model
+half alone and do not mention the instrument rework; this changelog is the record.
 
-### Changed
+### Instrument rework
+
+#### Changed
 
 - **Sections A (Executive Functioning) and D (Risk Propensity) reworded** to remove reproduced
   source-instrument text. Their items were independently rewritten to measure the same constructs —
@@ -42,17 +48,13 @@ Instrument version: **1.0.0 → 2.0.0** (MAJOR) · Scoring model: **2.0.0** (unc
 - `PROVENANCE.md` and `NOTICE.md` updated: Sections A and D are now original wording (construct basis
   cited), no longer reproductions; the remaining sections stay reproduced-or-adapted and unverified.
 
-### Added
+#### Added
 
 - `.zenodo.json` — controls the metadata of the Zenodo record minted on the next GitHub release
   (author "Levy Tate", title, description, license, concept-DOI link), so the deposit is not left to
   Zenodo's auto-detection.
 
----
-
-## [2.0.0] — 2026-07-25
-
-Instrument version: **1.0.0** (unchanged) · Scoring model: **1.0.0 → 2.0.0** (MAJOR)
+### Scoring-model corrections (drafted 2026-07-25)
 
 ### Effect on previously scored data
 

@@ -111,8 +111,8 @@ Standard library only, no dependencies.
 
 | Release | Instrument | Scoring model | DOI |
 |---|---|---|---|
-| *Unreleased* | 2.0.0 | 2.0.0 | *(pending — create a GitHub release to mint the version DOI)* |
-| 1.0.0 | 1.0.0 | 1.0.0 | archived under the concept DOI |
+| 2.0.0 (2026-09-07) | 2.0.0 | 2.0.0 | [10.5281/zenodo.22598618](https://doi.org/10.5281/zenodo.22598618) |
+| 1.1.0 (2025-08-02) | 1.0.0 | 1.0.0 | [10.5281/zenodo.16711302](https://doi.org/10.5281/zenodo.16711302) |
 
 The badge above points at the **concept DOI**, which always resolves to the newest version. **Papers
 and scored outputs should cite the version DOI**, not the concept DOI, so that the scoring model in
