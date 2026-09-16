@@ -86,14 +86,14 @@ what the respondent reported:
 
 | Item | Pointer |
 |---|---|
-| Q1 | Reports frequent difficulty getting started on tasks |
-| Q2 | Reports frequently forgetting instructions |
-| Q3 | Reports frequent difficulty controlling emotions |
-| Q4 | Reports frequent careless mistakes |
-| Q5 | Reports frequently getting stuck on one approach |
-| Q6 | Reports frequent difficulty planning ahead |
-| Q7 | Reports frequent difficulty organizing tasks |
-| Q8 | Reports frequent difficulty tracking belongings |
+| Q1 | Reports frequently putting off getting started |
+| Q2 | Reports frequently losing track of what was asked |
+| Q3 | Reports getting upset more easily than they would like |
+| Q4 | Reports frequently making small mistakes without noticing |
+| Q5 | Reports frequent difficulty changing an approach once started |
+| Q6 | Reports frequently not planning before starting |
+| Q7 | Reports work frequently becoming messy and hard to track |
+| Q8 | Reports frequently being unable to find their things |
 
 > These are **restatements, not measurements.** A single item cannot support a facet-level claim
 > such as "working memory is impaired." Do not aggregate, score, or threshold them.

@@ -32,7 +32,7 @@ to be, what was changed, and what reuse terms apply.
 
 | Section | Items | Apparent source | Verification | Reuse terms |
 |---|---|---|---|---|
-| **A** Executive Functioning | 1–8 | Construct basis: BRIEF family (PAR Inc.). **Reworded in 2.0.0 — no source text reproduced.** | Reworded (construct only) | Original wording, MIT. Constructs are not copyrightable; BRIEF's item *text* is PAR's and is not reproduced. |
+| **A** Executive Functioning | 1–8 | Construct basis: BRIEF family (PAR Inc.). **Reworded in 2.0.0, and again in 2.1.0 into plainer language — no source text reproduced.** | Reworded (construct only) | Original wording, MIT. Constructs are not copyrightable; BRIEF's item *text* is PAR's and is not reproduced. |
 | **B** Emotion Regulation | 9–12 | ERQ — Emotion Regulation Questionnaire (Gross & John, 2003) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
 | **C** Impulsivity | 13–18 | BIS-11 — Barratt Impulsiveness Scale (Patton, Stanford & Barratt, 1995) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
 | **D** Risk Propensity | 19–21 | Construct basis: GRiPS (Zhang, Highhouse & Nye, 2019). **Reworded in 2.0.0 — no source text reproduced.** | Reworded (construct only) | Original wording, MIT. |
@@ -52,7 +52,7 @@ compared item by item against the source scale.
 
 | Section | Source | What the chapter prints | Owner's stated terms | Verdict |
 |---|---|---|---|---|
-| **A** | BRIEF-A (PAR Inc.) | 8 items tracking BRIEF-A wording closely (instrument 1.0.0; reworded in 2.0.0 for this reason) | PAR: test materials are copyrighted trade secrets; copying without written permission is infringement; PAR "will not grant permission to include an entire test or scale in any publication", a few sample items may be approved by request (parinc.com licensing pages, position paper on photocopying). | **Not free.** The one section with a real exposure in the published chapter. |
+| **A** | BRIEF-A (PAR Inc.) | 8 items tracking BRIEF-A wording closely (instrument 1.0.0; reworded in 2.0.0 for this reason, and again in 2.1.0 into plainer language) | PAR: test materials are copyrighted trade secrets; copying without written permission is infringement; PAR "will not grant permission to include an entire test or scale in any publication", a few sample items may be approved by request (parinc.com licensing pages, position paper on photocopying). | **Not free.** The one section with a real exposure in the published chapter. |
 | **B** | ERQ (Gross & John, 2003) | Items 9 to 12 are ERQ items 8, 7, 2 and 9 verbatim | Stanford Psychophysiology Lab: "may be used for academic research purposes with appropriate citation." | Free for research use with citation. Reprinting in a book chapter is not addressed either way; low risk. |
 | **C** | BIS-11 (Patton, Stanford & Barratt, 1995) | Items 13 to 18 are BIS-11 items verbatim or lightly edited (item 17 negates BIS item 1) | "Free for research and clinical use with attribution"; the full item set is published openly in Stanford et al. (2009). | Free with citation. |
 | **D** | GRiPS (Zhang, Highhouse & Nye, 2019) | Items 19 to 21: two near-verbatim (GRiPS 3 and 5), one paraphrase (instrument 1.0.0; reworded in 2.0.0) | randmlab.com: "free to use for all research and academic purposes"; commercial use by contact with Dr. Zhang. | Free for academic use. |

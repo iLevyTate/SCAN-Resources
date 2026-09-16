@@ -23,7 +23,7 @@ The original content of this repository:
 
 Most SCANAQ items appear to derive from established psychometric instruments — ERQ, BIS-11, GDMS,
 GSE, PSS, and IRI — which remain the property of their respective copyright holders. **Sections A and
-D were independently reworded in instrument 2.0.0** to measure the BRIEF-family and GRiPS constructs
+D were independently reworded in instrument 2.0.0 (Section A again in 2.1.0)** to measure the BRIEF-family and GRiPS constructs
 without reproducing source text; that original wording is MIT-covered, though the underlying
 constructs derive from those instruments. See `PROVENANCE.md` for the section-by-section breakdown.
 

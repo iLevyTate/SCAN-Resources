@@ -21,6 +21,28 @@ Every scored output should record both.
 
 ---
 
+## [2.1.0] — 2026-09-16
+
+Instrument version: **2.0.0 → 2.1.0** (MINOR) · Scoring model: **2.0.0** (unchanged)
+
+### Changed
+
+- **Section A (Executive Functioning) reworded again**, into plainer language. The 2.0.0 items had
+  been written to stay clear of the BRIEF-A's text and read like it. The eight 2.1.0 items measure the
+  same eight constructs (initiating, working memory, emotional control, self-monitoring, shifting,
+  planning, organizing tasks, organizing materials) on the same 1 Never / 2 Sometimes / 3 Often
+  scale, and are the wording the author has asked IGI Global to substitute into Appendix A of the
+  published chapter (DOI 10.4018/979-8-3373-5702-7.ch005), whose printed Section A tracks the BRIEF-A
+  closely. Item text changed, so responses collected under 2.0.0 and 2.1.0 are not interchangeable
+  for Section A; scoring is identical under both.
+- The Section A content pointers in both scoring documents restate the new wording.
+- `PROVENANCE.md` gained a *Reuse terms, verified 2026-09-16* section: every source scale's terms
+  checked against its owner's own statement. Six free with citation, GDMS grey, BRIEF-A not free.
+
+### Unchanged
+
+- Scoring model 2.0.0, `scripts/score_scanaq.py` logic, Sections B to H, item count, response scales.
+
 ## [2.0.0] — 2026-09-07
 
 Instrument version: **1.0.0 → 2.0.0** (MAJOR) · Scoring model: **1.0.0 → 2.0.0** (MAJOR)

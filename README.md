@@ -8,7 +8,7 @@ dialogues, and JSONL datasets for five prefrontal-cortex-simulating agents.
 
 | | |
 |---|---|
-| **Instrument version** | 2.0.0 |
+| **Instrument version** | 2.1.0 |
 | **Scoring model version** | 2.0.0 |
 | **Release** | *Unreleased* — see [`CHANGELOG.md`](CHANGELOG.md) |
 
@@ -33,8 +33,9 @@ cognitive functioning and preferences in order to align SCAN with a user's profi
 - Executive Functioning · Emotion Regulation · Impulsivity · Risk Propensity
 - Decision-Making Style · Self-Efficacy · Perceived Stress · Empathy and Social Cognition
 
-Item text, item count, and response scales are **frozen at instrument version 2.0.0** (Sections A and
-D were reworded from 1.0.0 to remove reproduced source-instrument text). Changing any of them
+Item text, item count, and response scales are **frozen at instrument version 2.1.0** (Sections A and
+D were reworded from 1.0.0 to remove reproduced source-instrument text; Section A was reworded again
+in 2.1.0 into plainer language). Changing any of them
 invalidates previously collected responses and requires an instrument version bump.
 
 ### `SCANAQ Numerical Scoring Breakdown.md`
@@ -111,6 +112,7 @@ Standard library only, no dependencies.
 
 | Release | Instrument | Scoring model | DOI |
 |---|---|---|---|
+| 2.1.0 (2026-09-16) | 2.1.0 | 2.0.0 | *pending: fill in the version DOI Zenodo mints for the 2.1.0 release* |
 | 2.0.0 (2026-09-07) | 2.0.0 | 2.0.0 | [10.5281/zenodo.22598618](https://doi.org/10.5281/zenodo.22598618) |
 | 1.1.0 (2025-08-02) | 1.0.0 | 1.0.0 | [10.5281/zenodo.16711302](https://doi.org/10.5281/zenodo.16711302) |
 
