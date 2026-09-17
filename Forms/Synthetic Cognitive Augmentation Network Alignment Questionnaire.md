@@ -2,13 +2,13 @@
 
 | | |
 |---|---|
-| **Instrument version** | 2.0.0 |
+| **Instrument version** | 2.1.0 |
 | **Scored by** | Scoring model 2.0.0 — see `SCANAQ Numerical Scoring Breakdown.md` |
-| **Item text, item count, and response scales** | Frozen at 2.0.0 |
+| **Item text, item count, and response scales** | Frozen at 2.1.0 |
 
 > **Item provenance.** Sections A (Executive Functioning) and D (Risk Propensity) were **independently
 > reworded in instrument 2.0.0** to measure the same constructs without reproducing source-instrument
-> text — Section A's constructs are those of the BRIEF family (PAR Inc.) and Section D's those of the
+> text, and Section A was reworded again in 2.1.0 into plainer language for the same eight constructs. Section A's constructs are those of the BRIEF family (PAR Inc.) and Section D's those of the
 > GRiPS. The remaining sections still appear to derive from established instruments whose reuse terms
 > are **unverified**. Reworded items do not carry the source instruments' validation. See
 > `../PROVENANCE.md` and `../NOTICE.md` before administering or redistributing this questionnaire.
@@ -29,14 +29,14 @@ Welcome to the Synthetic Cognitive Augmentation Network Alignment Questionnaire 
 - 2 - Sometimes
 - 3 - Often
 
-1. Starting a task is hard for me.
-2. Instructions don't stick in my head.
-3. I struggle to keep my emotions in check.
-4. Small mistakes slip past me.
-5. Changing my approach is tough.
-6. I'm not good at planning ahead.
-7. My tasks end up disorganized.
-8. I lose track of where I put things.
+1. I put off getting started on things.
+2. I lose track of what I was asked to do.
+3. I get upset more easily than I'd like.
+4. I make small mistakes without noticing.
+5. Once I've started something one way, I find it hard to change how I'm doing it.
+6. I don't plan things out before I start.
+7. My work gets messy and hard to keep track of.
+8. I can't find my things when I need them.
 
 ---
 
@@ -166,7 +166,7 @@ The Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ) is
 
 ## Sources and Attribution
 
-The SCANAQ is an **ad-hoc composite**. In instrument 2.0.0, Sections A and D were reworded to measure
+The SCANAQ is an **ad-hoc composite**. In instrument 2.0.0, Sections A and D were reworded (and Section A again in 2.1.0) to measure
 their constructs without reproducing source text; the other six sections' items still appear drawn or
 adapted from established instruments (three to eight items each).
 

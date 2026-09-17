@@ -32,7 +32,7 @@ to be, what was changed, and what reuse terms apply.
 
 | Section | Items | Apparent source | Verification | Reuse terms |
 |---|---|---|---|---|
-| **A** Executive Functioning | 1–8 | Construct basis: BRIEF family (PAR Inc.). **Reworded in 2.0.0 — no source text reproduced.** | Reworded (construct only) | Original wording, MIT. Constructs are not copyrightable; BRIEF's item *text* is PAR's and is not reproduced. |
+| **A** Executive Functioning | 1–8 | Construct basis: BRIEF family (PAR Inc.). **Reworded in 2.0.0, and again in 2.1.0 into plainer language — no source text reproduced.** | Reworded (construct only) | Original wording, MIT. Constructs are not copyrightable; BRIEF's item *text* is PAR's and is not reproduced. |
 | **B** Emotion Regulation | 9–12 | ERQ — Emotion Regulation Questionnaire (Gross & John, 2003) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
 | **C** Impulsivity | 13–18 | BIS-11 — Barratt Impulsiveness Scale (Patton, Stanford & Barratt, 1995) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
 | **D** Risk Propensity | 19–21 | Construct basis: GRiPS (Zhang, Highhouse & Nye, 2019). **Reworded in 2.0.0 — no source text reproduced.** | Reworded (construct only) | Original wording, MIT. |
@@ -42,6 +42,30 @@ to be, what was changed, and what reuse terms apply.
 | **H** Empathy and Social Cognition | 33–36 | IRI — Interpersonal Reactivity Index (Davis, 1980, 1983) | UNVERIFIED | Journal-published; customarily free for research use with citation. |
 
 ---
+
+## Reuse terms, verified 2026-09-16
+
+The status banner above still applies to the *attribution* of items. The reuse terms themselves
+were checked against each owner's own published statement on 2026-09-16, with the chapter's
+Appendix A (instrument 1.0.0, as printed in IGI chapter DOI 10.4018/979-8-3373-5702-7.ch005)
+compared item by item against the source scale.
+
+| Section | Source | What the chapter prints | Owner's stated terms | Verdict |
+|---|---|---|---|---|
+| **A** | BRIEF-A (PAR Inc.) | 8 items tracking BRIEF-A wording closely (instrument 1.0.0; reworded in 2.0.0 for this reason, and again in 2.1.0 into plainer language) | PAR: test materials are copyrighted trade secrets; copying without written permission is infringement; PAR "will not grant permission to include an entire test or scale in any publication", a few sample items may be approved by request (parinc.com licensing pages, position paper on photocopying). | **Not free.** The one section with a real exposure in the published chapter. |
+| **B** | ERQ (Gross & John, 2003) | Items 9 to 12 are ERQ items 8, 7, 2 and 9 verbatim | Stanford Psychophysiology Lab: "may be used for academic research purposes with appropriate citation." | Free for research use with citation. Reprinting in a book chapter is not addressed either way; low risk. |
+| **C** | BIS-11 (Patton, Stanford & Barratt, 1995) | Items 13 to 18 are BIS-11 items verbatim or lightly edited (item 17 negates BIS item 1) | "Free for research and clinical use with attribution"; the full item set is published openly in Stanford et al. (2009). | Free with citation. |
+| **D** | GRiPS (Zhang, Highhouse & Nye, 2019) | Items 19 to 21: two near-verbatim (GRiPS 3 and 5), one paraphrase (instrument 1.0.0; reworded in 2.0.0) | randmlab.com: "free to use for all research and academic purposes"; commercial use by contact with Dr. Zhang. | Free for academic use. |
+| **E** | GDMS (Scott & Bruce, 1995) | Items 22 to 26: two verbatim (rational, avoidant), three paraphrased | No license statement from the authors. Published in *Educational and Psychological Measurement* (Sage); the DMIDI database redistributes it "for research and educational use only". | **Grey.** Reuse with citation is universal practice; the formal route for reprinting is a Sage permissions request. |
+| **F** | GSE (Schwarzer & Jerusalem, 1995) | Items 27 to 29 are GSE items 1, 2 and 4 verbatim | Authors "grant blanket permission to use and reproduce the scale, provided the source is appropriately cited." | Free, reproduction expressly permitted. |
+| **G** | PSS (Cohen, Kamarck & Mermelstein, 1983) | Items 30 to 32 are PSS items 2, 3 and 5 verbatim, re-anchored 1 to 5 | Copyright 1994 Sheldon Cohen. Mind Garden's distributed form: "Please feel free to use the Perceived Stress Scale for your research." The CMU lab page now routes permission requests through MAPI Research Trust's ePROVIDE, where "submitting a request for permission to use the PSS is completely free of charge". Mind Garden's own reprint carries "reprinted with permission of the American Sociological Association". | Free for research. Reprinting in a publication is the case the ASA permission line exists for; a free ePROVIDE request closes it formally. Not the exposure first assumed. |
+| **H** | IRI (Davis, 1980, 1983) | Items 33 to 36 are IRI items 2, 9, 3 and 1; three verbatim, item 35 lightly reworded | Davis, *Guide for Using the IRI*: "freely available for all non-commercial uses, and this document may be taken as an explicit granting of permission to use the instrument in such a way." | Free, permission explicit. |
+
+Two things this does not settle. First, the MIT licence on this repository still cannot extend to
+items that belong to the owners above; that remains as stated under *Why this matters*. Second,
+"free for research" and "may be reprinted in a commercially published book chapter" are not the
+same grant, and only F and H say the second in terms. For B, C, D and G the risk is low and the
+practice is universal; E is grey; A is the one that needs a decision.
 
 ## Adaptations made
 
