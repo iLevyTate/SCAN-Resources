@@ -16,6 +16,9 @@ identifiers:
     value: 10.5281/zenodo.14053202
     description: Concept DOI — always resolves to the latest version
   - type: doi
+    value: 10.5281/zenodo.22865240
+    description: Version DOI for 2.1.0 (instrument 2.1.0, scoring model 2.0.0; released 2026-09-20)
+  - type: doi
     value: 10.5281/zenodo.22598618
     description: Version DOI for 2.0.0 (instrument 2.0.0, scoring model 2.0.0; released 2026-09-07)
   - type: doi
@@ -36,4 +39,4 @@ keywords:
   - fine-tuning datasets
 license: MIT
 version: 2.1.0
-date-released: 2026-09-16
+date-released: 2026-09-20

@@ -25,6 +25,10 @@ Every scored output should record both.
 
 Instrument version: **2.0.0 → 2.1.0** (MINOR) · Scoring model: **2.0.0** (unchanged)
 
+Released 2026-09-20 as GitHub release `2.1.0` from commit f5eada7 and deposited on Zenodo as
+version DOI [10.5281/zenodo.22865240](https://doi.org/10.5281/zenodo.22865240) (concept DOI
+10.5281/zenodo.14053202).
+
 ### Changed
 
 - **Section A (Executive Functioning) reworded again**, into plainer language. The 2.0.0 items had
