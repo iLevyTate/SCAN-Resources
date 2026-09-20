@@ -112,7 +112,7 @@ Standard library only, no dependencies.
 
 | Release | Instrument | Scoring model | DOI |
 |---|---|---|---|
-| 2.1.0 (2026-09-16) | 2.1.0 | 2.0.0 | *pending: fill in the version DOI Zenodo mints for the 2.1.0 release* |
+| 2.1.0 (2026-09-20) | 2.1.0 | 2.0.0 | [10.5281/zenodo.22865240](https://doi.org/10.5281/zenodo.22865240) |
 | 2.0.0 (2026-09-07) | 2.0.0 | 2.0.0 | [10.5281/zenodo.22598618](https://doi.org/10.5281/zenodo.22598618) |
 | 1.1.0 (2025-08-02) | 1.0.0 | 1.0.0 | [10.5281/zenodo.16711302](https://doi.org/10.5281/zenodo.16711302) |
 
