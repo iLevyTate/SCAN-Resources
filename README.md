@@ -2,6 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/885073150.svg)](https://doi.org/10.5281/zenodo.14053202)
 
+<img width="2560" height="1280" alt="Paper, 1280×640@2x" src="https://github.com/user-attachments/assets/f3920ec2-1e0b-482e-bb2e-02c37831f5d0" />
+
 Resources for the **Synthetic Cognitive Augmentation Network (SCAN)**: the SCANAQ alignment
 questionnaire and its scoring model, a user survey, a generation prompt for synthetic training
 dialogues, and JSONL datasets for five prefrontal-cortex-simulating agents.
