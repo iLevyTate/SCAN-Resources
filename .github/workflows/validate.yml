@@ -37,16 +37,17 @@ jobs:
       - name: Dataset quality (strict)
         run: python3 scripts/validate_datasets.py --strict
 
-      # The appendix PDFs must never regain identifying metadata. Checks raw
-      # bytes rather than the metadata dictionary, since XMP is a separate
-      # stream that a metadata-level read reports as clean.
+      # The archived Appendix B PDF must never regain identifying metadata.
+      # Checks raw bytes rather than the metadata dictionary, since XMP is a
+      # separate stream that a metadata-level read reports as clean. The
+      # Appendix A PDF was removed from the tree on 2026-09-27 (Forms/ARCHIVE.md).
       - name: No identifying metadata in PDFs
         shell: bash
         run: |
           shopt -s nullglob
           pdfs=(Forms/*.pdf)
-          if [ "${#pdfs[@]}" -lt 2 ]; then
-            echo "::error::expected the two appendix PDFs in Forms/, found ${#pdfs[@]} — guard cannot run"
+          if [ "${#pdfs[@]}" -lt 1 ]; then
+            echo "::error::expected the archived Appendix B PDF in Forms/, found none: guard cannot run"
             exit 1
           fi
           found=0
@@ -57,5 +58,5 @@ jobs:
               found=1
             fi
           done
-          [ "$found" -eq 0 ] && echo "both PDFs clean (${#pdfs[@]} checked)"
+          [ "$found" -eq 0 ] && echo "PDFs clean (${#pdfs[@]} checked)"
           exit $found

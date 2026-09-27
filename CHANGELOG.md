@@ -21,6 +21,25 @@ Every scored output should record both.
 
 ---
 
+## [Unreleased]
+
+Instrument version: **2.1.0** (unchanged) · Scoring model: **2.0.0** (unchanged)
+
+### Removed
+
+- **The Appendix A PDF** (`Forms/Synthetic Cognitive Augmentation Network Alignment Questionnaire
+  (SCANAQ).pdf`, instrument 1.0.0). Its Section A tracks the BRIEF-A, whose publisher does not permit
+  reproduction of its items, and every release since 1.1.0 had been redistributing it. The archived
+  copy stays in the 1.1.0 Zenodo version and in git history. See `Forms/ARCHIVE.md`.
+- **`scripts/purge-pdf-metadata-from-history.sh`.** The history rewrite it prepared will not be run:
+  the Zenodo 1.1.0 copies cannot be edited, so the metadata would stay reachable, and the
+  correspondence with both publishers already carries the author's legal name. Decision recorded in
+  `Forms/ARCHIVE.md`.
+
+### Changed
+
+- The metadata guard in `.github/workflows/validate.yml` now expects one archived PDF, not two.
+
 ## [2.1.0] — 2026-09-16
 
 Instrument version: **2.0.0 → 2.1.0** (MINOR) · Scoring model: **2.0.0** (unchanged)

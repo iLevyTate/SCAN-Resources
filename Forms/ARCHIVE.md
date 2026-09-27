@@ -1,14 +1,28 @@
 # Archived Appendices
 
-The two PDFs in this directory are **Appendix A** and **Appendix B** of the published paper. They
-are the record of what reviewers saw and what the Zenodo DOI archived.
+One PDF remains in this directory: **Appendix B** of the published paper, the record of what
+reviewers saw and what the Zenodo DOI archived.
 
-| File | Appendix | Corresponds to |
-|---|---|---|
-| `Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ).pdf` | A | Instrument 1.0.0 |
-| `SCANAQ Scoring Breakdown, Descriptions, and PFC-Inspired Suggestions.pdf` | B | Scoring model **1.0.0** |
+| File | Appendix | Corresponds to | Status |
+|---|---|---|---|
+| `Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ).pdf` | A | Instrument 1.0.0 | Removed from the tree 2026-09-27 (see below) |
+| `SCANAQ Scoring Breakdown, Descriptions, and PFC-Inspired Suggestions.pdf` | B | Scoring model **1.0.0** | Retained |
 
 Both were added in commit `536b5f9` (2025-07-31).
+
+## Appendix A removed from the tree, 2026-09-27
+
+The Appendix A PDF was deleted from the working tree in the commit that added this section. Its
+Section A tracks the BRIEF-A closely, and PAR Inc., the BRIEF-A's publisher, does not grant
+permission to reproduce its items in any publication (`../PROVENANCE.md`, *Reuse terms, verified
+2026-09-16*). Every release cut from this repository was redistributing that text. The 2.1.0
+questionnaire markdown carries the replacement Section A wording and contains no BRIEF-A item.
+
+The archived record is not lost. The file is unchanged in git history through commit `291a991`,
+and the 1.1.0 Zenodo version ([10.5281/zenodo.16711302](https://doi.org/10.5281/zenodo.16711302))
+holds the copy that the published chapter's citation resolves to. Zenodo versions cannot be edited,
+so that copy stays as published. Anyone who needs the printed Appendix A should use the chapter
+itself (DOI 10.4018/979-8-3373-5702-7.ch005) or the Zenodo 1.1.0 files.
 
 ## The markdown is authoritative
 
@@ -44,9 +58,12 @@ a SharePoint `/ContentTypeId` GUID, and authoring-toolchain strings.
 Page content is untouched — extracted text is byte-identical to the originals (4,386 and 5,460
 characters). Only the metadata streams changed.
 
-> Note that the copies archived on Zenodo, and the blobs in commit `536b5f9`, still carry the
-> original metadata. Removing it there requires publishing a new Zenodo version and rewriting git
-> history respectively.
+> The copies archived on Zenodo, and the blobs in commit `536b5f9`, still carry the original
+> metadata. A history-rewrite script was prepared for the 2.0.0 release and dry-run only. On
+> 2026-09-27 the decision was taken not to run it, and the script was removed: the Zenodo 1.1.0
+> copies cannot be edited, so a rewrite would leave the metadata reachable anyway, and the author's
+> correction correspondence with both publishers is already conducted under the legal name. Rewriting
+> published history would force every clone holder to re-clone for no gain in privacy.
 
 ## If replacement appendices are needed
 
@@ -60,6 +77,6 @@ repository disagree with the literature that cites it.
 `Appendix-B-Scoring-v2.0.md` is a corrected, publication-ready Appendix B built from
 `SCANAQ Numerical Scoring Breakdown.md`. It exists as a new file, per the rule above — the original
 1.0.0 PDF is left untouched as the archived record. A corrigendum request the author can send to the
-publisher accompanies it at `../Corrections/corrigendum-appendix-B.md`. Appendix A is **not** yet
-replaced: it reproduces third-party instrument items whose reuse terms have to be settled first (see
-`../PROVENANCE.md` and `../NOTICE.md`).
+publisher accompanies it at `../Corrections/corrigendum-appendix-B.md`. Appendix A's replacement is
+the Section A wording in instrument 2.1.0, which the author has asked IGI Global to substitute into
+the published chapter (see `../PROVENANCE.md` and `../NOTICE.md`).
