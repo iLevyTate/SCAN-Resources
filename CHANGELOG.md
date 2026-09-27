@@ -38,7 +38,8 @@ Instrument version: **2.1.0** (unchanged) · Scoring model: **2.0.0** (unchanged
 
 ### Changed
 
-- The metadata guard in `.github/workflows/validate.yml` now expects one archived PDF, not two.
+- The metadata guards in `.github/workflows/validate.yml` and `release.yml` now expect one archived
+  PDF, not two.
 
 ## [2.1.0] — 2026-09-16
 
