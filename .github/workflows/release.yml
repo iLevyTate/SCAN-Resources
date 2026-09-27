@@ -63,21 +63,22 @@ jobs:
       # Publishing a release archives this tree to Zenodo permanently, so re-run the
       # repository's own gates first rather than trusting that main was green when it
       # merged. The PDF metadata guard is the one that cannot be walked back after the
-      # fact: a deposit carrying identifying metadata in the appendix PDFs is public and
-      # minted with a DOI.
+      # fact: a deposit carrying identifying metadata in the archived Appendix B PDF is
+      # public and minted with a DOI. (The Appendix A PDF left the tree on 2026-09-27;
+      # see Forms/ARCHIVE.md.)
       - name: Re-run the repository's validation gates
         run: |
           python3 scripts/score_scanaq.py
           python3 scripts/validate_datasets.py
           python3 scripts/validate_datasets.py --strict
 
-      - name: No identifying metadata in the appendix PDFs
+      - name: No identifying metadata in the archived PDF
         shell: bash
         run: |
           shopt -s nullglob
           pdfs=(Forms/*.pdf)
-          if [ "${#pdfs[@]}" -lt 2 ]; then
-            echo "::error::expected the two appendix PDFs in Forms/, found ${#pdfs[@]} — guard cannot run"
+          if [ "${#pdfs[@]}" -lt 1 ]; then
+            echo "::error::expected the archived Appendix B PDF in Forms/, found none: guard cannot run"
             exit 1
           fi
           found=0
@@ -88,7 +89,7 @@ jobs:
               found=1
             fi
           done
-          [ "$found" -eq 0 ] && echo "both PDFs clean (${#pdfs[@]} checked)"
+          [ "$found" -eq 0 ] && echo "PDFs clean (${#pdfs[@]} checked)"
           exit $found
 
       - name: Extract the changelog section for this version

@@ -61,13 +61,15 @@ the five PFC agents. The canonical source for each agent's system prompt.
 The **CAUSE** survey — 50 questions across 11 sections gathering user requirements, perceived value,
 interface preferences, pain points, privacy concerns, demographics, and pricing perception.
 
-### Archived appendices (PDF)
-`Synthetic Cognitive Augmentation Network Alignment Questionnaire (SCANAQ).pdf` and
-`SCANAQ Scoring Breakdown, Descriptions, and PFC-Inspired Suggestions.pdf` are **Appendix A and
-Appendix B of the published paper**, frozen as the archived record.
+### Archived appendix (PDF)
+`SCANAQ Scoring Breakdown, Descriptions, and PFC-Inspired Suggestions.pdf` is **Appendix B of the
+published paper**, frozen as the archived record. The Appendix A PDF (instrument 1.0.0) was removed
+from the tree on 2026-09-27 because its Section A reproduces items whose owner does not permit
+reproduction; the archived copy remains in the 1.1.0 Zenodo version. See
+[`Forms/ARCHIVE.md`](Forms/ARCHIVE.md).
 
 > **Appendix B documents scoring model 1.0.0 and contains known errors.** The markdown is
-> authoritative. See [`Forms/ARCHIVE.md`](Forms/ARCHIVE.md).
+> authoritative.
 
 ### `Appendix-B-Scoring-v2.0.md`
 A corrected, publication-ready replacement for the published Appendix B, built from the current
