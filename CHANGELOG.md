@@ -21,7 +21,7 @@ Every scored output should record both.
 
 ---
 
-## [Unreleased]
+## [2.1.1] — 2026-10-13
 
 Instrument version: **2.1.0** (unchanged) · Scoring model: **2.0.0** (unchanged)
 
@@ -219,6 +219,8 @@ forward, `raw_responses` is a mandatory field on every scored record.
   blind peer review, along with a SharePoint content-type GUID. Page content is unchanged.
   **Not yet addressed:** the original blobs remain readable in commit `536b5f9`, and the Zenodo
   archive still holds the un-stripped files.
+  *Resolved 2026-09-27 by decision, not by rewrite:* history will not be rewritten, since the
+  Zenodo copies cannot be edited. See 2.1.1 and `Forms/ARCHIVE.md`.
 
 ---
 
