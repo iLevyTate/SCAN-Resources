@@ -32,7 +32,7 @@ jobs:
           # Full history so the tag lands on a real commit, not a shallow stub.
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
