@@ -18,7 +18,7 @@ jobs:
 
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
-          python-version: "3.11"
+          python-version: "3.15"
 
       # Verifies scoring model 2.0.0 against the worked example in
       # Forms/SCANAQ Numerical Scoring Breakdown.md, plus regressions for the
